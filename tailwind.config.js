@@ -36,9 +36,9 @@ module.exports = {
         },
       ],
       body: [
-        "1.25rem",
+        "1rem",
         {
-          lineHeight: "1.75rem",
+          lineHeight: "1.5rem",
           fontWeight: "500",
         },
       ],

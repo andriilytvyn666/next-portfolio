@@ -1,16 +1,26 @@
+import styles from "./page.module.css";
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <div className="flex flex-col gap-4 text-body">
+    <div className="flex flex-col gap-8 text-body">
       <h1 className="text-headerXl text-fg">Andrii Lytvyn</h1>
-      <div className="flex flex-col gap-[28px]">
+      <div className="flex flex-col gap-[24px]">
         <p>
           Hi there! My name is Andrii Lytvyn, and I am currently studying
-          Computer Science & Artificial Intelligence at Lviv Polytechnic
-          National University.
+          Computer Science & Artificial Intelligence at{" "}
+          <Link href="https://lpnu.ua" target="_blank" className={styles.link}>
+            Lviv Polytechnic National University
+          </Link>
+          .
         </p>
         <p>
           I enjoy creating design in Figma & learning web dev. Right now I’m
-          discovering Next.js. You can find project list here.
+          discovering Next.js. You can find{" "}
+          <Link href="/projects" className={styles.link}>
+            project list
+          </Link>{" "}
+          here.
         </p>
         <p>
           Outside of the computer world, I enjoy Ukrainian underground music. In
@@ -22,14 +32,54 @@ export default function Home() {
           CV & skills summary.
         </p>
       </div>
-      <div className="flex flex-col px-6 py-5 rounded-lg bg-bg-active">
-        <span>Mail me at lytvyn.andrii.contact@gmail.com.</span>
-        <span> Contact me in Skype, Telegram. </span>
-        <span>Find me on LinkedIn, Github.</span>
-      </div>
-      <div className="flex flex-col px-6 py-5 rounded-lg bg-bg-active">
-        <span>Here’s my CV.</span>
-        <span>Read my skills summary.</span>
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col px-6 py-5 rounded-lg bg-bg-active">
+          <span>
+            Mail me at{" "}
+            <Link
+              className={styles.link}
+              href="mailto:lytvyn.andrii.contact@gmail.com"
+            >
+              lytvyn.andrii.contact@gmail.com
+            </Link>
+            .
+          </span>
+          <span>
+            Contact me in{" "}
+            <Link
+              href="https://join.skype.com/invite/KOwuCulY372x"
+              className={styles.link}
+            >
+              Skype
+            </Link>
+            ,{" "}
+            <Link href="https://t.me/nneeeooo" className={styles.link}>
+              Telegram
+            </Link>
+            .{" "}
+          </span>
+          <span>
+            Find me on{" "}
+            <Link
+              href="https://www.linkedin.com/in/andrii-lytvyn-80350a226/"
+              className={styles.link}
+            >
+              LinkedIn
+            </Link>
+            ,{" "}
+            <Link
+              href="https://github.com/andriilytvyn666"
+              className={styles.link}
+            >
+              Github
+            </Link>
+            .
+          </span>
+        </div>
+        <div className="flex flex-col px-6 py-5 rounded-lg bg-bg-active">
+          <span>Here’s my CV.</span>
+          <span>Read my skills summary.</span>
+        </div>
       </div>
     </div>
   );
