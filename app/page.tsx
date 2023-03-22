@@ -4,7 +4,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col gap-8 text-body">
-      <h1 className="text-headerXl text-fg">Andrii Lytvyn</h1>
+      <h1 className="text-center text-headerXl text-fg md:text-left">
+        Andrii Lytvyn
+      </h1>
       <div className="flex flex-col gap-[24px]">
         <p>
           Hi there! My name is Andrii Lytvyn, and I am currently studying
@@ -77,8 +79,23 @@ export default function Home() {
           </span>
         </div>
         <div className="flex flex-col px-6 py-5 rounded-lg bg-bg-active">
-          <span>Here’s my CV.</span>
-          <span>Read my skills summary.</span>
+          <span>
+            Here’s my{" "}
+            <Link
+              href="https://github.com/andriilytvyn666"
+              className={styles.link}
+            >
+              CV
+            </Link>
+            .
+          </span>
+          <span>
+            Read my{" "}
+            <Link href="/skills" className={styles.link}>
+              skills summary
+            </Link>
+            .
+          </span>
         </div>
       </div>
     </div>

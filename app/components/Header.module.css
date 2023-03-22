@@ -1,0 +1,21 @@
+.header-width {
+  @apply w-full flex min-h-[4rem] h-16 gap-5 justify-center items-center;
+}
+
+@screen sm {
+  .header-width {
+    @apply w-[46.75rem];
+  }
+}
+
+@screen md {
+  .header-width {
+    @apply w-[48.75rem] justify-end;
+  }
+}
+
+@screen lg {
+  .header-width {
+    @apply w-[51.25rem];
+  }
+}

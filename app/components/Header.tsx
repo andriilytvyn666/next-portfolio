@@ -1,5 +1,6 @@
 import React from "react";
 import NavLink from "next/link";
+import styles from "./Header.module.css";
 
 const links = [
   { name: "Home", link: "/" },
@@ -8,15 +9,10 @@ const links = [
   { name: "Courses & Edu", link: "/courses" },
 ];
 
-type Props = {
-  className?: string;
-};
 // TODO: add state management to highligh currently active nav page
-export default function Header({ className }: Props) {
+export default function Header() {
   return (
-    <div
-      className={className + " " + "flex h-16 gap-5 justify-end items-center"}
-    >
+    <div className={styles["header-width"]}>
       {links.map((link) => (
         <NavLink
           href={link.link}

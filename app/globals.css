@@ -3,8 +3,37 @@
 @tailwind utilities;
 
 @layer base {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   * {
-    @apply transition-colors duration-300;
+    @apply transition-all duration-300;
+    @apply selection:bg-[#282828];
+  }
+
+  h1 {
+    @apply text-headerXl;
+  }
+
+  h2 {
+    @apply text-header;
+  }
+
+  h3 {
+    @apply text-headerSm;
+  }
+
+  h4 {
+    @apply text-itemTitle;
+  }
+
+  h5 {
+    @apply text-itemSubtitle;
+  }
+
+  h6 {
+    @apply text-itemNav;
   }
 }
 
