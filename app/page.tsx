@@ -1,5 +1,6 @@
-import styles from "./page.module.css";
-import Link from "next/link";
+import Link from 'next/link'
+
+import styles from './page.module.css'
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <div className="flex flex-col gap-[24px]">
         <p>
           Hi there! My name is Andrii Lytvyn, and I am currently studying
-          Computer Science & Artificial Intelligence at{" "}
+          Computer Science & Artificial Intelligence at{' '}
           <Link href="https://lpnu.ua" target="_blank" className={styles.link}>
             Lviv Polytechnic National University
           </Link>
@@ -18,10 +19,10 @@ export default function Home() {
         </p>
         <p>
           I enjoy creating design in Figma & learning web dev. Right now I’m
-          discovering Next.js. You can find{" "}
+          discovering Next.js. You can find{' '}
           <Link href="/projects" className={styles.link}>
             project list
-          </Link>{" "}
+          </Link>{' '}
           here.
         </p>
         <p>
@@ -37,7 +38,7 @@ export default function Home() {
       <div className="flex flex-col gap-4">
         <div className="flex flex-col px-6 py-5 rounded-lg bg-bg-active">
           <span>
-            Mail me at{" "}
+            Mail me at{' '}
             <Link
               className={styles.link}
               href="mailto:lytvyn.andrii.contact@gmail.com"
@@ -47,28 +48,28 @@ export default function Home() {
             .
           </span>
           <span>
-            Contact me in{" "}
+            Contact me in{' '}
             <Link
               href="https://join.skype.com/invite/KOwuCulY372x"
               className={styles.link}
             >
               Skype
             </Link>
-            ,{" "}
+            ,{' '}
             <Link href="https://t.me/nneeeooo" className={styles.link}>
               Telegram
             </Link>
-            .{" "}
+            .{' '}
           </span>
           <span>
-            Find me on{" "}
+            Find me on{' '}
             <Link
               href="https://www.linkedin.com/in/andrii-lytvyn-80350a226/"
               className={styles.link}
             >
               LinkedIn
             </Link>
-            ,{" "}
+            ,{' '}
             <Link
               href="https://github.com/andriilytvyn666"
               className={styles.link}
@@ -80,7 +81,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col px-6 py-5 rounded-lg bg-bg-active">
           <span>
-            Here’s my{" "}
+            Here’s my{' '}
             <Link
               href="https://github.com/andriilytvyn666"
               className={styles.link}
@@ -90,7 +91,7 @@ export default function Home() {
             .
           </span>
           <span>
-            Read my{" "}
+            Read my{' '}
             <Link href="/skills" className={styles.link}>
               skills summary
             </Link>
@@ -99,5 +100,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }

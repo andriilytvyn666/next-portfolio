@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default function Debug() {
   return (
@@ -10,5 +10,5 @@ export default function Debug() {
       <span className="hidden xl:block 2xl:hidden">xl</span>
       <span className="hidden 2xl:block">2xl</span>
     </div>
-  );
+  )
 }

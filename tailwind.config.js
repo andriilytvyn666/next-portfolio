@@ -10,22 +10,22 @@ module.exports = {
       itemTitle: [
         "1.125rem",
         {
-          lineHeight: "1.75rem",
+          lineHeight: "1.375rem",
           fontWeight: "500",
         },
       ],
       itemSubtitle: [
         "1rem",
         {
-          lineHeight: "1.5rem",
+          lineHeight: "1.375rem",
           fontWeight: "500",
         },
       ],
       itemNav: [
-        "1.25rem",
+        "1rem",
         {
           lineHeight: "1.75rem",
-          fontWeight: "700",
+          fontWeight: "500",
         },
       ],
       footer: [

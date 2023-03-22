@@ -1,11 +1,12 @@
-import React from "react";
-import Card from "../components/Card";
-import PageHead from "../components/PageHead";
-import CardGroup from "../components/CardGroup";
+import React from 'react'
+
+import Card from '../components/Card'
+import CardGroup from '../components/CardGroup'
+import PageHead from '../components/PageHead'
 
 export default function Projects() {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-8">
       <PageHead
         title="Projects"
         className="lg:col-span-2"
@@ -32,5 +33,5 @@ export default function Projects() {
         />
       </CardGroup>
     </div>
-  );
+  )
 }

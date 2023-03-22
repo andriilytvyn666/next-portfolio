@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default function Footer() {
   return (
@@ -7,5 +7,5 @@ export default function Footer() {
         CC BY-NC-SA 4.0 2023 © Andrii Lytvyn
       </span>
     </div>
-  );
+  )
 }

@@ -1,7 +1,8 @@
-import React from "react";
-import SkillGroup from "../components/SkillGroup";
-import Skill from "../components/Skill";
-import PageHead from "../components/PageHead";
+import React from 'react'
+
+import PageHead from '../components/PageHead'
+import Skill from '../components/Skill'
+import SkillGroup from '../components/SkillGroup'
 
 export default function Skills() {
   return (
@@ -57,5 +58,5 @@ export default function Skills() {
         <Skill name="Figma" />
       </SkillGroup>
     </div>
-  );
+  )
 }
