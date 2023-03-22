@@ -63,6 +63,13 @@ module.exports = {
           fontWeight: "600",
         },
       ],
+      skillChip: [
+        "1rem",
+        {
+          lineHeight: "1.5rem",
+          fontWeight: "400",
+        },
+      ],
     },
     colors: {
       bg: {
@@ -74,7 +81,11 @@ module.exports = {
         secondary: "#838383",
       },
     },
-    extend: {},
+    extend: {
+      screens: {
+        xs: "320px",
+      },
+    },
   },
   plugins: [],
 };
