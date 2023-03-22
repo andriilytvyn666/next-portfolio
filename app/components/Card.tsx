@@ -8,7 +8,7 @@ type Props = {
 
 export default function Card({ title, subtitle }: Props) {
   return (
-    <Link href="https://rihterb.pp.ua" target="_blank">
+    <Link href="https://rihterb.pp.ua" target="_blank" className="w-full">
       <div className="flex gap-4 p-4 rounded-lg hover:bg-bg-active">
         <div className="w-12 h-12 rounded-lg bg-fg"></div>
         <div className="flex flex-col ">

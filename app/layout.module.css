@@ -5,18 +5,18 @@
 
 @screen sm {
   .page-grid {
-    @apply w-[48.75rem] grid-cols-6 [&>*]:col-span-6;
+    @apply max-w-[48.75rem] grid-cols-6 [&>*]:col-span-6;
   }
 }
 
 @screen md {
   .page-grid {
-    @apply w-[46.75rem] grid-cols-8 [&>*]:col-span-8  px-0;
+    @apply max-w-[46.75rem] grid-cols-8 [&>*]:col-span-8  px-0;
   }
 }
 
 @screen lg {
   .page-grid {
-    @apply w-[51.25rem];
+    @apply max-w-[51.25rem];
   }
 }

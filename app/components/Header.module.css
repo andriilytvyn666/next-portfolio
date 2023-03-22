@@ -4,18 +4,18 @@
 
 @screen sm {
   .header-width {
-    @apply w-[46.75rem];
+    @apply max-w-[46.75rem];
   }
 }
 
 @screen md {
   .header-width {
-    @apply w-[48.75rem] justify-end;
+    @apply max-w-[48.75rem] justify-end;
   }
 }
 
 @screen lg {
   .header-width {
-    @apply w-[51.25rem];
+    @apply max-w-[51.25rem];
   }
 }

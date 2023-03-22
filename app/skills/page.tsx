@@ -1,10 +1,16 @@
 import React from "react";
 import SkillGroup from "../components/SkillGroup";
 import Skill from "../components/Skill";
+import PageHead from "../components/PageHead";
 
 export default function Skills() {
   return (
     <div className="flex flex-col gap-8">
+      <PageHead
+        title="Skills"
+        className="lg:col-span-2"
+        subtitle="My skills summary"
+      />
       <SkillGroup title="Languages">
         <Skill name="English B2" />
         <Skill name="Ukrainian Native" />
