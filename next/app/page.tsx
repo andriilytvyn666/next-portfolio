@@ -37,7 +37,7 @@ export default function Home() {
         </p>
         <p>
           Outside of the computer world, I enjoy Ukrainian underground music. In
-          the future, I'd like to create a project to showcase interesting
+          the future, I would like to create a project to showcase interesting
           musicians because some deserve much more attention.
         </p>
         <p>
