@@ -47,7 +47,7 @@ export default function Courses() {
             url="https://google.com"
             imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/b69759e65f4f59194548d96898c2a40e02449e68-128x128.webp"
             title="Lviv Polytechnic National University"
-            subtitle="Bachelor ‧ CS/AI ‧ 2020 - 2024"
+            subtitle="Bachelor · CS/AI · 2020 - 2024"
           />
         </CardGroup>
       </div>
