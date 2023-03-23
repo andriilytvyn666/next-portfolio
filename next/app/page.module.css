@@ -1,3 +1,5 @@
 .link {
-  @apply underline transition-colors duration-300 text-fg decoration-[#292929] hover:decoration-[#bbbbbb] underline-offset-4;
+  @apply text-fg border-b border-[#292929] hover:border-[#bbbbbb];
+  @apply inline-flex items-center gap-1.5;
+  @apply transition-colors duration-300;
 }

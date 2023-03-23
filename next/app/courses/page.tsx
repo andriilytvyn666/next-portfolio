@@ -16,25 +16,25 @@ export default function Courses() {
         <CardGroup>
           <Card
             url="https://google.com"
-            imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/571192adc396a4f5386b411ff6d2d1dacdde656d-128x128.webp"
+            imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/b69759e65f4f59194548d96898c2a40e02449e68-128x128.webp"
             title="Foundations of UX Design"
             subtitle="3 Sep, 2022 · Google "
           />
           <Card
             url="https://google.com"
-            imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/571192adc396a4f5386b411ff6d2d1dacdde656d-128x128.webp"
+            imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/b69759e65f4f59194548d96898c2a40e02449e68-128x128.webp"
             title="Foundations of UX Design"
             subtitle="3 Sep, 2022 · Google "
           />
           <Card
             url="https://google.com"
-            imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/571192adc396a4f5386b411ff6d2d1dacdde656d-128x128.webp"
+            imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/b69759e65f4f59194548d96898c2a40e02449e68-128x128.webp"
             title="Foundations of UX Design"
             subtitle="3 Sep, 2022 · Google "
           />
           <Card
             url="https://google.com"
-            imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/571192adc396a4f5386b411ff6d2d1dacdde656d-128x128.webp"
+            imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/b69759e65f4f59194548d96898c2a40e02449e68-128x128.webp"
             title="Foundations of UX Design"
             subtitle="3 Sep, 2022 · Google "
           />
@@ -45,7 +45,7 @@ export default function Courses() {
         <CardGroup singleCol={true}>
           <Card
             url="https://google.com"
-            imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/571192adc396a4f5386b411ff6d2d1dacdde656d-128x128.webp"
+            imageUrl="https://cdn.sanity.io/images/5zmqw6cj/production/b69759e65f4f59194548d96898c2a40e02449e68-128x128.webp"
             title="Lviv Polytechnic National University"
             subtitle="Bachelor ‧ CS/AI ‧ 2020 - 2024"
           />
