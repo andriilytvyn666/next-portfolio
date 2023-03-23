@@ -9,7 +9,7 @@ export default async function Skills() {
   const data = await fetchSkills()
 
   return (
-    <div className="flex flex-col gap-8">
+    <>
       <PageHead
         title="Skills"
         className="lg:col-span-2"
@@ -26,7 +26,7 @@ export default async function Skills() {
           )
         })}
       </>
-    </div>
+    </>
   )
 }
 

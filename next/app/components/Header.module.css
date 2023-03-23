@@ -1,5 +1,10 @@
 .header-width {
-  @apply w-full flex min-h-[4rem] h-16 gap-5 justify-center items-center;
+  @apply w-full;
+}
+
+.header-nav {
+  @apply flex gap-5 justify-center items-center;
+  @apply h-16 min-h-[4rem];
 }
 
 @screen sm {
@@ -10,7 +15,10 @@
 
 @screen md {
   .header-width {
-    @apply max-w-[48.75rem] justify-end;
+    @apply max-w-[48.75rem];
+  }
+  .header-nav {
+    @apply justify-end;
   }
 }
 

@@ -31,7 +31,7 @@ export default function RootLayout({ children }: Props) {
           <div className="flex flex-col justify-between">
             <div className="flex flex-col justify-between h-full">
               <Debug />
-              {children}
+              <article className="flex flex-col gap-8">{children}</article>
               <Footer />
             </div>
           </div>

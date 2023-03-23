@@ -5,11 +5,11 @@ import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-8 text-body">
+    <>
       <h1 className="text-center text-headerXl text-fg md:text-left">
         Andrii Lytvyn
       </h1>
-      <div className="flex flex-col gap-[24px]">
+      <div className="flex flex-col gap-[24px] text-body">
         <p>
           Hi there! My name is Andrii Lytvyn, and I am a 3rd-year student of CS
           & AI at{' '}
@@ -29,7 +29,7 @@ export default function Home() {
         </p>
         <p>
           Aside from that, I have some valuable experience with other tools &
-          languages. Learn more on the{''}
+          languages. Learn more on the{' '}
           <Link href="/projects" className={styles.link}>
             skills page
           </Link>
@@ -103,6 +103,6 @@ export default function Home() {
           .
         </span>
       </div>
-    </div>
+    </>
   )
 }

@@ -11,7 +11,7 @@ export default async function Projects() {
   const builder = imageUrlBuilder(client)
 
   return (
-    <div className="flex flex-col gap-8">
+    <>
       <PageHead
         title="Projects"
         className="lg:col-span-2"
@@ -36,7 +36,7 @@ export default async function Projects() {
           )
         })}
       </>
-    </div>
+    </>
   )
 }
 

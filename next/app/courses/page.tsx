@@ -6,7 +6,7 @@ import PageHead from '../components/PageHead'
 
 export default function Courses() {
   return (
-    <div className="flex flex-col gap-12">
+    <>
       <div className="flex flex-col gap-8">
         <PageHead
           title="Courses"
@@ -51,6 +51,6 @@ export default function Courses() {
           />
         </CardGroup>
       </div>
-    </div>
+    </>
   )
 }

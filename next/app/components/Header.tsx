@@ -16,18 +16,20 @@ const links = [
 export default function Header() {
   const pathname = usePathname()
   return (
-    <div className={styles['header-width']}>
-      {links.map((link) => (
-        <NavLink
-          href={link.link}
-          key={link.name}
-          className={`text-itemNav hover:text-fg ${
-            link.link === pathname && 'text-fg'
-          }`}
-        >
-          {link.name}
-        </NavLink>
-      ))}
-    </div>
+    <header className={styles['header-width']}>
+      <nav className={styles['header-nav']}>
+        {links.map((link) => (
+          <NavLink
+            href={link.link}
+            key={link.name}
+            className={`text-itemNav hover:text-fg ${
+              link.link === pathname && 'text-fg'
+            }`}
+          >
+            {link.name}
+          </NavLink>
+        ))}
+      </nav>
+    </header>
   )
 }
