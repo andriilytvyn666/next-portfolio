@@ -7,16 +7,16 @@ export default function Footer() {
 
   useEffect(() => {
     const locale = 'en-us'
+
     const dateFormat: Intl.DateTimeFormatOptions = {
       hour: 'numeric',
       minute: '2-digit',
-      timeZone: 'Europe/Kyiv',
     }
 
-    setDate(new Date().toLocaleTimeString(locale, dateFormat))
+    setDate(Intl.DateTimeFormat(locale, dateFormat).format())
 
     setInterval(
-      () => setDate(new Date().toLocaleTimeString(locale, dateFormat)),
+      () => setDate(Intl.DateTimeFormat(locale, dateFormat).format()),
       1000
     )
   }, [])
