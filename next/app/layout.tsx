@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import Debug from './components/Debug'
@@ -8,9 +9,16 @@ import styles from './layout.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Andrii Lytvyn',
-  description: 'My portfolio website',
+  description:
+    'I am a web developer from Ukraine. Interested mainly in Vue, React & UI/UX.',
+  icons: {
+    shortcut: '/favicon.ico',
+    icon: '/favicon-32x32.png',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
 }
 
 type Props = {
