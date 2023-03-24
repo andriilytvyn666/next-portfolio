@@ -21,11 +21,22 @@ export default defineConfig({
             S.listItem()
               .title('Projects')
               .child(S.document().schemaType('projects').documentId('projects')),
+            S.listItem()
+              .title('Courses & Education')
+              .child(S.document().schemaType('coursesEducation').documentId('coursesEducation')),
             ...S.documentTypeListItems().filter(
               (listItem) =>
-                !['skill', 'skillGroup', 'skills', 'project', 'projectGroup', 'projects'].includes(
-                  `${listItem.getId()}`
-                )
+                ![
+                  'skill',
+                  'skillGroup',
+                  'skills',
+                  'project',
+                  'projectGroup',
+                  'projects',
+                  'course',
+                  'coursesEducation',
+                  'education',
+                ].includes(`${listItem.getId()}`)
             ),
           ]),
     }),
