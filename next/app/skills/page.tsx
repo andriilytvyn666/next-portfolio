@@ -1,14 +1,14 @@
 'use client'
 
-import React from 'react'
+import React, { use } from 'react'
 
 import client from '../../client'
 import PageHead from '../components/PageHead'
 import Skill from '../components/Skill'
 import SkillGroup from '../components/SkillGroup'
 
-export default async function Skills() {
-  const data = await fetchSkills()
+export default function Skills() {
+  const data = use(fetchSkills())
 
   return (
     <>

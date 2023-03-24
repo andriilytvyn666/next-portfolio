@@ -1,15 +1,15 @@
 'use client'
 
 import imageUrlBuilder from '@sanity/image-url'
-import React from 'react'
+import React, { use } from 'react'
 
 import client from '../../client'
 import Card from '../components/Card'
 import CardGroup from '../components/CardGroup'
 import PageHead from '../components/PageHead'
 
-export default async function Projects() {
-  const data = await fetchProjects()
+export default function Projects() {
+  const data = use(fetchProjects())
   const builder = imageUrlBuilder(client)
 
   return (
