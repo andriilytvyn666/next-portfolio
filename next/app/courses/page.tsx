@@ -1,3 +1,5 @@
+'use client'
+
 import { buildFileUrl } from '@sanity/asset-utils'
 import imageUrlBuilder from '@sanity/image-url'
 import React from 'react'
