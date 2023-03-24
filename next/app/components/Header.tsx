@@ -22,7 +22,7 @@ export default function Header() {
           <NavLink
             href={link.link}
             key={link.name}
-            className={`text-itemNav hover:text-fg ${
+            className={`select-none text-itemNav  px-2.5 hover:text-fg hover:translate-y-1 ${
               link.link === pathname && 'text-fg'
             }`}
           >

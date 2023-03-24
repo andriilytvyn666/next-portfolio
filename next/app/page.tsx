@@ -13,7 +13,7 @@ export default function Home() {
         <p>
           Hi there! My name is Andrii Lytvyn, and I am a 3rd-year student of CS
           & AI at{' '}
-          <Link href="https://lpnu.ua" target="_blank" className={styles.link}>
+          <Link href="https://lpnu.ua" className="link" target="_blank">
             Lviv Polytechnic National University
           </Link>
           .
@@ -21,16 +21,12 @@ export default function Home() {
         <p>
           Creating UI designs in Figma and bringing them to life is my passion.
           I have been working with Next.js 13, Nuxt 3, and Tailwind CSS lately.
-          Here you can find{' '}
-          <Link href="/projects" className={styles.link}>
-            my projects
-          </Link>
-          .
+          Here you can find <Link href="/projects">my projects</Link>.
         </p>
         <p>
           Aside from that, I have some valuable experience with other tools &
           languages. Learn more on the{' '}
-          <Link href="/projects" className={styles.link}>
+          <Link href="/projects" className="link">
             skills page
           </Link>
           .
@@ -49,10 +45,7 @@ export default function Home() {
       <div className="flex flex-col">
         <span>
           Mail me at{' '}
-          <Link
-            className={styles.link}
-            href="mailto:lytvyn.andrii.contact@gmail.com"
-          >
+          <Link href="mailto:lytvyn.andrii.contact@gmail.com" className="link">
             lytvyn.andrii.contact@gmail.com
           </Link>
           .
@@ -61,13 +54,13 @@ export default function Home() {
           Contact me in{' '}
           <Link
             href="https://join.skype.com/invite/KOwuCulY372x"
-            className={styles.link}
+            className="link"
           >
             <SiSkype />
             Skype
           </Link>
           ,{' '}
-          <Link href="https://t.me/nneeeooo" className={styles.link}>
+          <Link href="https://t.me/nneeeooo" className="link">
             <SiTelegram />
             Telegram
           </Link>
@@ -77,16 +70,13 @@ export default function Home() {
           Find me on{' '}
           <Link
             href="https://www.linkedin.com/in/andrii-lytvyn-80350a226/"
-            className={styles.link}
+            className="link"
           >
             <SiLinkedin />
             LinkedIn
           </Link>
           ,{' '}
-          <Link
-            href="https://github.com/andriilytvyn666"
-            className={`${styles.link}`}
-          >
+          <Link href="https://github.com/andriilytvyn666" className="link">
             <SiGithub />
             Github
           </Link>
@@ -94,10 +84,7 @@ export default function Home() {
         </span>
         <span>
           Here is my{' '}
-          <Link
-            href="https://github.com/andriilytvyn666"
-            className={styles.link}
-          >
+          <Link href="https://github.com/andriilytvyn666" className="link">
             CV
           </Link>
           .

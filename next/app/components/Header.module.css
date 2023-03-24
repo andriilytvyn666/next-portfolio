@@ -3,7 +3,7 @@
 }
 
 .header-nav {
-  @apply flex gap-5 justify-center items-center;
+  @apply flex justify-center items-center;
   @apply h-16 min-h-[4rem];
 }
 

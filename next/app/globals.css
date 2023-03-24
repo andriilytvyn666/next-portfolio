@@ -38,6 +38,10 @@
 }
 
 @layer components {
+  .link {
+    @apply text-fg border-b border-[#292929] hover:border-[#bbbbbb];
+    @apply inline-flex items-center gap-1.5;
+  }
 }
 
 @layer utilities {
