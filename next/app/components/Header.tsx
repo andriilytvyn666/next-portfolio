@@ -26,6 +26,7 @@ export default function Header() {
             alt="logo"
             width={48}
             height={48}
+            unoptimized
           />
         </NavLink>{' '}
         <div className="flex">
