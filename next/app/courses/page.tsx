@@ -1,16 +1,16 @@
-'use client'
-
 import { buildFileUrl } from '@sanity/asset-utils'
 import imageUrlBuilder from '@sanity/image-url'
-import React, { use } from 'react'
+import React from 'react'
 
 import client, { dataset, projectId } from '../../client'
 import Card from '../components/Card'
 import CardGroup from '../components/CardGroup'
 import PageHead from '../components/PageHead'
 
-export default function Courses() {
-  const data = use(fetchCoursesEducatio())
+export default async function Courses() {
+  const data = await client.fetch<CoursesEducation>(
+    `*[_type == "coursesEducation"][0]`
+  )
   const builder = imageUrlBuilder(client)
   const locale = 'en-us'
 
@@ -74,8 +74,4 @@ export default function Courses() {
       </div>
     </>
   )
-}
-
-const fetchCoursesEducatio = async () => {
-  return client.fetch<CoursesEducation>(`*[_type == "coursesEducation"][0]`)
 }

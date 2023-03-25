@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import { SiGithub, SiLinkedin, SiSkype, SiTelegram } from 'react-icons/si'
 
-import styles from './page.module.css'
-
 export default function Home() {
   return (
     <>

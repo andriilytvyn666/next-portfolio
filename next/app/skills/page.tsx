@@ -1,14 +1,12 @@
-'use client'
-
-import React, { use } from 'react'
+import React from 'react'
 
 import client from '../../client'
 import PageHead from '../components/PageHead'
 import Skill from '../components/Skill'
 import SkillGroup from '../components/SkillGroup'
 
-export default function Skills() {
-  const data = use(fetchSkills())
+export default async function Skills() {
+  const data = await client.fetch<Skills>(`*[_type == "skills"][0]`)
 
   return (
     <>
@@ -30,8 +28,4 @@ export default function Skills() {
       </>
     </>
   )
-}
-
-const fetchSkills = async () => {
-  return client.fetch<Skills>(`*[_type == "skills"][0]`)
 }
