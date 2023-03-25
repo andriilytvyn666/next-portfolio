@@ -20,12 +20,11 @@ export default function Header() {
     <header className={styles['header-width']}>
       <nav className={styles['header-nav']}>
         <NavLink href="/">
-          {/* causes unavoidable mismatch waring */}
           <Image
-            src={`/emoji/${Math.floor(Math.random() * 11) + 1}.png`}
+            src={`/emoji/${pathname === '/' ? 'home' : pathname}.png`}
             alt="logo"
-            width={48}
-            height={48}
+            width={42}
+            height={42}
             unoptimized
           />
         </NavLink>{' '}
