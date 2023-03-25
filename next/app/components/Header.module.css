@@ -1,0 +1,29 @@
+.header-width {
+  @apply w-full;
+}
+
+.header-nav {
+  @apply flex justify-center items-center;
+  @apply h-16 min-h-[4rem];
+}
+
+@screen sm {
+  .header-width {
+    @apply max-w-[46.75rem];
+  }
+}
+
+@screen md {
+  .header-width {
+    @apply max-w-[48.75rem];
+  }
+  .header-nav {
+    @apply justify-between;
+  }
+}
+
+@screen lg {
+  .header-width {
+    @apply max-w-[51.25rem];
+  }
+}

@@ -1,0 +1,5 @@
+.footer {
+  @apply flex flex-col-reverse items-center justify-center;
+  @apply sm:flex-row sm:justify-between;
+  @apply min-h-[5rem] h-20 mt-16;
+}
