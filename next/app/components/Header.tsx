@@ -17,14 +17,14 @@ const links = [
 export default function Header() {
   const pathname = usePathname()
   return (
-    <header className={styles['header-width']}>
+    <header className={styles['header']}>
       <nav className={styles['header-nav']}>
         <NavLink href="/">
           <Image
             src={`/emoji/${pathname === '/' ? 'home' : pathname}.png`}
             alt="logo"
-            width={42}
-            height={42}
+            width={48}
+            height={48}
             unoptimized
           />
         </NavLink>{' '}

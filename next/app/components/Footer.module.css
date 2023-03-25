@@ -1,5 +1,23 @@
 .footer {
   @apply flex flex-col-reverse items-center justify-center;
-  @apply sm:flex-row sm:justify-between;
-  @apply min-h-[5rem] h-20 mt-16;
+  @apply h-20 w-full;
+}
+
+@screen sm {
+  .footer {
+    @apply w-[38rem];
+    @apply flex-row justify-between;
+  }
+}
+
+@screen md {
+  .footer {
+    @apply w-[46rem];
+  }
+}
+
+@screen lg {
+  .footer {
+    @apply w-[51.25rem];
+  }
 }

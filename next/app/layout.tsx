@@ -29,22 +29,17 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body
-        className={
-          inter.className +
-          ' bg-bg text-fg-secondary flex items-center flex-col h-screen gap-12'
-        }
-      >
-        <Header />
-        <div className={styles['page-grid']}>
-          <div className="flex flex-col justify-between">
-            <div className="flex flex-col justify-between h-full">
-              <Debug />
-              <article className="flex flex-col gap-8">{children}</article>
-              <Footer />
-            </div>
-          </div>
-        </div>{' '}
+      <body className={inter.className}>
+        <Debug />
+        <div className="flex flex-col items-center flex-grow min-h-screen gap-12 pt-8 md:pt-4 bg-bg">
+          <Header />
+          <article
+            className={`grid items-stretch justify-center w-full grid-cols-10 gap-5 px-4 grow mx-auto ${styles['article']}`}
+          >
+            <div className="flex flex-col col-span-10 gap-8">{children}</div>
+          </article>
+          <Footer />
+        </div>
       </body>
     </html>
   )

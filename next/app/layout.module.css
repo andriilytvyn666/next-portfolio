@@ -1,22 +1,15 @@
-.page-grid {
-  @apply w-full h-screen px-4 mx-auto;
-  @apply grid grid-cols-10 grid-rows-1 gap-5 [&>*]:col-span-10;
-}
-
 @screen sm {
-  .page-grid {
-    @apply max-w-[48.75rem] grid-cols-6 [&>*]:col-span-6;
+  .article {
+    @apply w-[38rem] mx-auto px-0;
   }
 }
-
 @screen md {
-  .page-grid {
-    @apply max-w-[46.75rem] grid-cols-8 [&>*]:col-span-8  px-0;
+  .article {
+    @apply w-[46rem] flex-row;
   }
 }
-
 @screen lg {
-  .page-grid {
-    @apply max-w-[51.25rem];
+  .article {
+    @apply w-[51.25rem];
   }
 }

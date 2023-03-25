@@ -10,6 +10,7 @@
   * {
     @apply transition-all duration-300;
     @apply selection:bg-[#282828];
+    @apply text-fg-secondary text-body;
   }
 
   h1 {
