@@ -2,6 +2,7 @@ import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
+import {vercelDeployTool} from 'sanity-plugin-vercel-deploy'
 export default defineConfig({
   name: 'default',
   title: 'andrii-lytvyn-portfolio',
@@ -10,6 +11,7 @@ export default defineConfig({
   dataset: 'production',
 
   plugins: [
+    vercelDeployTool(),
     deskTool({
       structure: (S) =>
         S.list()
