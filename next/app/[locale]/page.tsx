@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl'
-import Link from 'next/link'
+import { Link } from 'next-intl'
 import { SiGithub, SiLinkedin, SiSkype, SiTelegram } from 'react-icons/si'
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <p>
           Hi there! My name is Andrii Lytvyn, and I am a 3rd-year student of CS
           & AI at{' '}
-          <Link href="https://lpnu.ua" className="link" target="_blank">
+          <Link href="https://lpnu.ua/en" className="link" target="_blank">
             Lviv Polytechnic National University
           </Link>
           .
@@ -22,7 +22,11 @@ export default function Home() {
         <p>
           Creating UI designs in Figma and bringing them to life is my passion.
           I have been working with Next.js 13, Nuxt 3, and Tailwind CSS lately.
-          Here you can find <Link href="/projects">my projects</Link>.
+          Here you can find{' '}
+          <Link href="/projects" className="link">
+            my projects
+          </Link>
+          .
         </p>
         <p>
           Aside from that, I have some valuable experience with other tools &

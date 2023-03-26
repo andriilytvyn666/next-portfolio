@@ -1,9 +1,9 @@
 'use client'
 
 import { Link } from 'next-intl'
+import { usePathname } from 'next-intl/client'
 import Image from 'next/image'
 import NavLink from 'next/link'
-import { usePathname } from 'next/navigation'
 import React from 'react'
 
 import styles from './Header.module.css'
@@ -17,9 +17,17 @@ const links = [
 
 type Props = {
   navNames: string[]
+  locale: string
 }
 
-export default function Header({ navNames }: Props) {
+const getImageName = (pathname: string | null): string => {
+  if (pathname === null) {
+    return '/home'
+  }
+  return pathname.endsWith('/') ? '/home' : pathname
+}
+
+export default function Header({ navNames, locale }: Props) {
   const pathname = usePathname()
 
   return (
@@ -27,7 +35,7 @@ export default function Header({ navNames }: Props) {
       <nav className={styles['header-nav']}>
         <NavLink href="/">
           <Image
-            src={`/emoji/${pathname === '/' ? 'home' : pathname}.png`}
+            src={`/emoji${getImageName(pathname)}.png`}
             alt="logo"
             width={48}
             height={48}
@@ -35,10 +43,20 @@ export default function Header({ navNames }: Props) {
           />
         </NavLink>{' '}
         <div className="flex">
-          <Link href="/" locale="uk">
+          {/* <span>{pathname.replace(`/${locale}`, '')}</span> */}
+          {/* TODO: refactor language switching */}
+          <Link
+            className="select-none text-itemNav  px-2.5 hover:text-fg hover:translate-y-1"
+            href="/"
+            locale="uk"
+          >
             UK
           </Link>
-          <Link href="/" locale="en">
+          <Link
+            className="select-none text-itemNav  px-2.5 hover:text-fg hover:translate-y-1"
+            href="/"
+            locale="en"
+          >
             EN
           </Link>
           {links.map((link, index) => (

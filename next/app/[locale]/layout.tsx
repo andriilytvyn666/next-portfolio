@@ -49,12 +49,12 @@ export default function RootLayout({ children, params }: Props) {
         <Debug />
         <div className="flex flex-col items-center flex-grow min-h-screen gap-12 pt-8 md:pt-4 bg-bg">
           <Header
+            locale={params.locale}
             navNames={[t('home'), t('skills'), t('projects'), t('courses')]}
           />
           <article
             className={`grid items-stretch justify-center w-full grid-cols-10 gap-5 px-4 grow mx-auto ${styles['article']}`}
           >
-            <span className="text-fg">{params.locale}</span>
             <div className="flex flex-col col-span-10 gap-8">{children}</div>
           </article>
           <Footer name={tHome('name')} location={tFooter('location')} />
