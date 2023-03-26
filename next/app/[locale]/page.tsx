@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl'
 import { Link } from 'next-intl'
+import PlainLink from 'next/link'
 import { SiGithub, SiLinkedin, SiSkype, SiTelegram } from 'react-icons/si'
 
 export default function Home() {
@@ -50,48 +51,51 @@ export default function Home() {
       <div className="flex flex-col">
         <span>
           Mail me at{' '}
-          <Link href="mailto:lytvyn.andrii.contact@gmail.com" className="link">
+          <PlainLink
+            href="mailto:lytvyn.andrii.contact@gmail.com"
+            className="link"
+          >
             lytvyn.andrii.contact@gmail.com
-          </Link>
+          </PlainLink>
           .
         </span>
         <span>
           Contact me in{' '}
-          <Link
+          <PlainLink
             href="https://join.skype.com/invite/KOwuCulY372x"
             className="link"
           >
             <SiSkype />
             Skype
-          </Link>
+          </PlainLink>
           ,{' '}
-          <Link href="https://t.me/nneeeooo" className="link">
+          <PlainLink href="https://t.me/nneeeooo" className="link">
             <SiTelegram />
             Telegram
-          </Link>
+          </PlainLink>
           .{' '}
         </span>
         <span>
           Find me on{' '}
-          <Link
+          <PlainLink
             href="https://www.linkedin.com/in/andrii-lytvyn-80350a226/"
             className="link"
           >
             <SiLinkedin />
             LinkedIn
-          </Link>
+          </PlainLink>
           ,{' '}
-          <Link href="https://github.com/andriilytvyn666" className="link">
+          <PlainLink href="https://github.com/andriilytvyn666" className="link">
             <SiGithub />
             Github
-          </Link>
+          </PlainLink>
           .
         </span>
         <span>
           Here is my{' '}
-          <Link href="https://github.com/andriilytvyn666" className="link">
+          <PlainLink href="https://github.com/andriilytvyn666" className="link">
             CV
-          </Link>
+          </PlainLink>
           .
         </span>
       </div>

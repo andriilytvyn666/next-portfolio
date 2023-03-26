@@ -1,6 +1,11 @@
 .footer {
   @apply flex flex-col-reverse items-center justify-center;
-  @apply h-20 w-full;
+  @apply h-20 w-full gap-1;
+}
+
+.locale-link {
+  @apply flex gap-2 select-none text-footer px-2.5;
+  @apply hover:text-fg hover:-translate-y-1;
 }
 
 @screen sm {

@@ -43,22 +43,6 @@ export default function Header({ navNames, locale }: Props) {
           />
         </NavLink>{' '}
         <div className="flex">
-          {/* <span>{pathname.replace(`/${locale}`, '')}</span> */}
-          {/* TODO: refactor language switching */}
-          <Link
-            className="select-none text-itemNav  px-2.5 hover:text-fg hover:translate-y-1"
-            href="/"
-            locale="uk"
-          >
-            UK
-          </Link>
-          <Link
-            className="select-none text-itemNav  px-2.5 hover:text-fg hover:translate-y-1"
-            href="/"
-            locale="en"
-          >
-            EN
-          </Link>
           {links.map((link, index) => (
             <Link
               href={link.link}
