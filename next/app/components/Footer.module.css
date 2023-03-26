@@ -1,6 +1,6 @@
 .footer {
-  @apply flex flex-col-reverse items-center justify-center;
-  @apply h-20 w-full gap-1;
+  @apply flex flex-col items-center justify-center;
+  @apply w-full gap-2 h-32;
 }
 
 .locale-link {
@@ -17,7 +17,7 @@
 
 @screen md {
   .footer {
-    @apply w-[46rem];
+    @apply w-[46rem] h-20;
   }
 }
 
