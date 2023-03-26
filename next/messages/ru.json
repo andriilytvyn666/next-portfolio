@@ -1,0 +1,21 @@
+{
+  "home": {
+    "name": "Андрій Литвин"
+  },
+  "header": {
+    "home": "Головна",
+    "skills": "Навички",
+    "projects": "Проєкти",
+    "courses": "Курси & Освіта"
+  },
+  "footer": {
+    "location": "Львів, Україна"
+  },
+  "courses": {
+    "degrees": {
+      "Bachelor": "Бакалавр",
+      "Master": "Магістр",
+      "Phd": "PhD"
+    }
+  }
+}
