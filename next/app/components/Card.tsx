@@ -13,7 +13,7 @@ type Props = {
 export default function Card({ title, subtitle, url, imageUrl }: Props) {
   return (
     <Link href={url} target="_blank" className="w-full h-20">
-      <div className="flex gap-4 p-4 rounded-lg hover:bg-bg-active">
+      <div className="flex gap-4 p-4 border rounded-lg hover:bg-bg-active border-bg-active">
         <Image
           unoptimized
           src={imageUrl}

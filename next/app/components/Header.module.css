@@ -4,7 +4,7 @@
 
 .header-nav {
   @apply flex justify-center items-center h-full;
-  @apply flex-col gap-4;
+  @apply flex-col gap-4 text-fg-secondary;
 }
 
 @screen sm {
