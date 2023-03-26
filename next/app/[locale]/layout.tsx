@@ -45,7 +45,7 @@ export default function RootLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <Debug />
+        {/* <Debug /> */}
         <div className="flex flex-col items-center flex-grow min-h-screen gap-12 pt-8 md:pt-4 bg-bg">
           <Header
             locale={params.locale}
