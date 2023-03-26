@@ -1,15 +1,15 @@
 @screen sm {
   .article {
-    @apply w-[38rem] mx-auto px-0;
+    @apply max-w-[38rem] mx-auto px-0;
   }
 }
 @screen md {
   .article {
-    @apply w-[46rem] flex-row;
+    @apply max-w-[46rem] flex-row;
   }
 }
 @screen lg {
   .article {
-    @apply w-[51.25rem];
+    @apply max-w-[51.25rem];
   }
 }
