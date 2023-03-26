@@ -1,0 +1,14 @@
+{
+  "home": {
+    "name": "Andrii Lytvyn"
+  },
+  "header": {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "courses": "Courses & Edu"
+  },
+  "footer": {
+    "location": "Lviv, Ukraine"
+  }
+}

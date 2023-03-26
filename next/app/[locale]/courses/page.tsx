@@ -2,10 +2,10 @@ import { buildFileUrl } from '@sanity/asset-utils'
 import imageUrlBuilder from '@sanity/image-url'
 import React from 'react'
 
-import client, { dataset, projectId } from '../../client'
-import Card from '../components/Card'
-import CardGroup from '../components/CardGroup'
-import PageHead from '../components/PageHead'
+import client, { dataset, projectId } from '../../../client'
+import Card from '../../components/Card'
+import CardGroup from '../../components/CardGroup'
+import PageHead from '../../components/PageHead'
 
 export default async function Courses() {
   const data = await client.fetch<CoursesEducation>(

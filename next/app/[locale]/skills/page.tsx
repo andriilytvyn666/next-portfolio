@@ -1,9 +1,9 @@
 import React from 'react'
 
-import client from '../../client'
-import PageHead from '../components/PageHead'
-import Skill from '../components/Skill'
-import SkillGroup from '../components/SkillGroup'
+import client from '../../../client'
+import PageHead from '../../components/PageHead'
+import Skill from '../../components/Skill'
+import SkillGroup from '../../components/SkillGroup'
 
 export default async function Skills() {
   const data = await client.fetch<Skills>(`*[_type == "skills"][0]`)

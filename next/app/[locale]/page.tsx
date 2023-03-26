@@ -1,11 +1,14 @@
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { SiGithub, SiLinkedin, SiSkype, SiTelegram } from 'react-icons/si'
 
 export default function Home() {
+  const t = useTranslations('home')
+
   return (
     <>
       <h1 className="text-center text-headerXl text-fg md:text-left">
-        Andrii Lytvyn
+        {t('name')}
       </h1>
       <div className="flex flex-col gap-[24px] text-body">
         <p>

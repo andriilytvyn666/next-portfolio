@@ -1,10 +1,10 @@
 import imageUrlBuilder from '@sanity/image-url'
 import React from 'react'
 
-import client from '../../client'
-import Card from '../components/Card'
-import CardGroup from '../components/CardGroup'
-import PageHead from '../components/PageHead'
+import client from '../../../client'
+import Card from '../../components/Card'
+import CardGroup from '../../components/CardGroup'
+import PageHead from '../../components/PageHead'
 
 export default async function Projects() {
   const data = await client.fetch<Projects>(`*[_type == "projects"][0]`)

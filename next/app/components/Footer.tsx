@@ -7,7 +7,12 @@ import { HiClock } from 'react-icons/hi2'
 
 import styles from './Footer.module.css'
 
-export default function Footer() {
+type Props = {
+  name: string
+  location: string
+}
+
+export default function Footer({ name, location }: Props) {
   const [date, setDate] = useState<string>('hh:mm')
 
   useEffect(() => {
@@ -37,7 +42,7 @@ export default function Footer() {
           CC BY-NC-SA 4.0
         </Link>
         <span className="select-none">{'·'}</span>
-        2023 © Andrii Lytvyn
+        2023 © {name}
       </span>
       <span className="flex gap-2 text-footer text-fg-secondary">
         <span className="flex items-center gap-2">
@@ -48,7 +53,7 @@ export default function Footer() {
             width={20}
             height={20}
           />
-          {'Lviv, Ukraine'}
+          {location}
         </span>
         <span className="select-none">{'·'}</span>
         <span className="flex gap-1.5 items-center">
