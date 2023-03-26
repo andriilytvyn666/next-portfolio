@@ -10,5 +10,12 @@
   },
   "footer": {
     "location": "Lviv, Ukraine"
+  },
+  "courses": {
+    "degrees": {
+      "Bachelor": "Bachelor",
+      "Master": "Master",
+      "Phd": "PhD"
+    }
   }
 }

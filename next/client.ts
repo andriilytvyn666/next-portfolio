@@ -9,3 +9,10 @@ export default createClient({
   useCdn: true,
   apiVersion: '2023-03-22',
 })
+
+export const getLocalizedString = (
+  locale: string,
+  string: localeString
+): string => {
+  return locale === 'en' ? string.en : string.uk
+}

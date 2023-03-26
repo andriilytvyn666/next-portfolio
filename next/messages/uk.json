@@ -10,5 +10,12 @@
   },
   "footer": {
     "location": "Львів, Україна"
+  },
+  "courses": {
+    "degrees": {
+      "Bachelor": "Бакалавр",
+      "Master": "Магістр",
+      "Phd": "PhD"
+    }
   }
 }

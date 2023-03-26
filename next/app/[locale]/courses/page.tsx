@@ -1,8 +1,10 @@
 import { buildFileUrl } from '@sanity/asset-utils'
 import imageUrlBuilder from '@sanity/image-url'
+import { useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 
-import client, { dataset, projectId } from '../../../client'
+import client, { dataset, getLocalizedString, projectId } from '../../../client'
 import Card from '../../components/Card'
 import CardGroup from '../../components/CardGroup'
 import PageHead from '../../components/PageHead'
@@ -11,16 +13,18 @@ export default async function Courses() {
   const data = await client.fetch<CoursesEducation>(
     `*[_type == "coursesEducation"][0]`
   )
+
   const builder = imageUrlBuilder(client)
-  const locale = 'en-us'
+  // const locale = 'en-us'
+  const locale = useLocale()
 
   // TODO: change date format based on i18n locale (when i18n added)
   return (
     <>
       <div className="flex flex-col gap-8">
         <PageHead
-          title={data.title}
-          subtitle={data.subtitle}
+          title={getLocalizedString(locale, data.titleCourses)}
+          subtitle={getLocalizedString(locale, data.subtitle)}
           className="lg:col-span-2"
         />
         <CardGroup>
@@ -51,16 +55,23 @@ export default async function Courses() {
         </CardGroup>
       </div>
       <div className="flex flex-col gap-6">
-        <PageHead title="Education" className="lg:col-span-2" />
+        <PageHead
+          title={getLocalizedString(locale, data.titleEducation)}
+          className="lg:col-span-2"
+        />
         <CardGroup singleCol={true}>
           {data.educationList.map((education, index) => {
             return (
               <Card
                 key={index}
-                title={education.name}
-                subtitle={`${education.degree} · ${
+                title={getLocalizedString(locale, education.name)}
+                subtitle={`${getLocalizedString(
+                  locale,
+                  education.degree
+                )} · ${getLocalizedString(
+                  locale,
                   education.major
-                }  · ${new Date(
+                )}  · ${new Date(
                   education.dateStarted
                 ).getFullYear()}-${new Date(
                   education.dateFinished
