@@ -1,29 +1,29 @@
-.header-width {
-  @apply w-full;
+.header {
+  @apply w-full h-20;
 }
 
 .header-nav {
-  @apply flex justify-center items-center;
-  @apply h-16 min-h-[4rem];
+  @apply flex justify-center items-center h-full;
+  @apply flex-col gap-4 text-fg-secondary;
 }
 
 @screen sm {
-  .header-width {
-    @apply max-w-[46.75rem];
+  .header {
+    @apply w-[38rem];
   }
 }
 
 @screen md {
-  .header-width {
-    @apply max-w-[48.75rem];
+  .header {
+    @apply w-[46rem];
   }
   .header-nav {
-    @apply justify-between;
+    @apply justify-between flex-row gap-0;
   }
 }
 
 @screen lg {
-  .header-width {
-    @apply max-w-[51.25rem];
+  .header {
+    @apply w-[51.25rem];
   }
 }

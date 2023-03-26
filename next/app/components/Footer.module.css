@@ -1,5 +1,28 @@
 .footer {
-  @apply flex flex-col-reverse items-center justify-center;
-  @apply sm:flex-row sm:justify-between;
-  @apply min-h-[5rem] h-20 mt-16;
+  @apply flex flex-col items-center justify-center;
+  @apply w-full gap-2 h-32;
+}
+
+.locale-link {
+  @apply flex gap-2 select-none text-footer px-2.5;
+  @apply hover:text-fg hover:-translate-y-1;
+}
+
+@screen sm {
+  .footer {
+    @apply w-[38rem];
+    @apply flex-row justify-between;
+  }
+}
+
+@screen md {
+  .footer {
+    @apply w-[46rem] h-20;
+  }
+}
+
+@screen lg {
+  .footer {
+    @apply w-[51.25rem];
+  }
 }

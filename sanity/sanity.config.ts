@@ -26,6 +26,9 @@ export default defineConfig({
             S.listItem()
               .title('Courses & Education')
               .child(S.document().schemaType('coursesEducation').documentId('coursesEducation')),
+            S.listItem()
+              .title('Homepage')
+              .child(S.document().schemaType('homepage').documentId('homepage')),
             ...S.documentTypeListItems().filter(
               (listItem) =>
                 ![
@@ -38,6 +41,7 @@ export default defineConfig({
                   'course',
                   'coursesEducation',
                   'education',
+                  'homepage',
                 ].includes(`${listItem.getId()}`)
             ),
           ]),

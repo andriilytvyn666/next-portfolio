@@ -6,20 +6,25 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'title',
-      type: 'string',
-      validation: (rule: Rule) => rule.required().min(3),
+      name: 'titleCourses',
+      type: 'localeString',
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'subtitle',
-      type: 'string',
-      validation: (rule: Rule) => rule.required().min(3),
+      type: 'localeString',
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'courses',
       type: 'array',
       of: [{type: 'course'}],
       validation: (rule: Rule) => rule.required().min(1),
+    },
+    {
+      name: 'titleEducation',
+      type: 'localeString',
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'educationList',

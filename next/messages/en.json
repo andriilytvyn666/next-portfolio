@@ -1,0 +1,19 @@
+{
+  "header": {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "courses": "Edu"
+  },
+  "footer": {
+    "location": "Lviv, Ukraine",
+    "name": "Andrii Lytvyn"
+  },
+  "courses": {
+    "degrees": {
+      "Bachelor": "Bachelor",
+      "Master": "Master",
+      "Phd": "PhD"
+    }
+  }
+}

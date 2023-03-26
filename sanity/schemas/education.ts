@@ -7,20 +7,18 @@ export default {
   fields: [
     {
       name: 'name',
-      type: 'string',
-      validation: (rule: Rule) => rule.required().min(1),
+      type: 'localeString',
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'degree',
-      type: 'string',
-      options: {list: ['Bachelor', 'Master', 'PhD']},
-      initialValue: 'Bachelor',
-      validation: (rule: Rule) => rule.required().min(1),
+      type: 'localeString',
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'major',
-      type: 'string',
-      validation: (rule: Rule) => rule.required().min(1),
+      type: 'localeString',
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'link',

@@ -1,6 +1,6 @@
 type Project = {
-  title: string
-  subtitle: string
+  title: localeString
+  subtitle: localeString
   link: string
   image: image
 }
@@ -14,9 +14,9 @@ type Course = {
 }
 
 type Education = {
-  name: string
-  degree: string
-  major: string
+  name: localeString
+  degree: localeString
+  major: localeString
   link: string
   dateStarted: string
   dateFinished: string
@@ -24,9 +24,10 @@ type Education = {
 }
 
 type CoursesEducation = {
-  title: string,
-  subtitle: string,
-  courses: Course[],
+  titleCourses: localeString
+  subtitle: localeString
+  courses: Course[]
+  titleEducation: localeString
   educationList: Education[]
 }
 
@@ -36,6 +37,8 @@ type ProjectGroup = {
 }
 
 type Projects = {
+  title: localeString
+  subtitle: localeString
   projectGroups: ProjectGroup[]
 }
 
@@ -44,8 +47,14 @@ type SkillGroup = {
   skills: Skill[]
 }
 
+type Homepage = {
+  name: localeString
+  text: localePortableText
+}
 
 type Skills = {
+  title: localeString
+  subtitle: localeString
   skillGroups: SkillGroup[]
 }
 
@@ -56,6 +65,16 @@ type SkillGroup = {
 
 type Skill = {
   name: string
+}
+
+type localeString = {
+  en: string
+  uk: string
+}
+
+type localePortableText = {
+  en: Any
+  uk: Any
 }
 
 type file = {

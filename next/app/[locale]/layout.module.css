@@ -1,0 +1,15 @@
+@screen sm {
+  .article {
+    @apply max-w-[38rem] mx-auto px-0;
+  }
+}
+@screen md {
+  .article {
+    @apply max-w-[46rem] flex-row;
+  }
+}
+@screen lg {
+  .article {
+    @apply max-w-[51.25rem];
+  }
+}

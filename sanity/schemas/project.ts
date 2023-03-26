@@ -7,13 +7,13 @@ export default {
   fields: [
     {
       name: 'title',
-      type: 'string',
-      validation: (rule: Rule) => rule.required().min(1),
+      type: 'localeString',
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'subtitle',
-      type: 'string',
-      validation: (rule: Rule) => rule.required().min(1),
+      type: 'localeString',
+      validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'link',
