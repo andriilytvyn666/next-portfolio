@@ -40,7 +40,6 @@ export default function RootLayout({ children, params }: Props) {
   }
 
   const t = useTranslations('header')
-  const tHome = useTranslations('home')
   const tFooter = useTranslations('footer')
 
   return (
@@ -57,7 +56,7 @@ export default function RootLayout({ children, params }: Props) {
           >
             <div className="flex flex-col col-span-10 gap-8">{children}</div>
           </article>
-          <Footer name={tHome('name')} location={tFooter('location')} />
+          <Footer name={tFooter('name')} location={tFooter('location')} />
         </div>
       </body>
     </html>

@@ -1,6 +1,8 @@
 import course from './course'
 import coursesEducation from './coursesEducation'
 import education from './education'
+import homepage from './homepage'
+import localePortableText from './localePortableText'
 import localeString from './localeString'
 import project from './project'
 import projectGroup from './projectGroup'
@@ -20,4 +22,6 @@ export const schemaTypes = [
   education,
   coursesEducation,
   localeString,
+  localePortableText,
+  homepage,
 ]

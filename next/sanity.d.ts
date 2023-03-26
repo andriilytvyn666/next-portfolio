@@ -47,6 +47,10 @@ type SkillGroup = {
   skills: Skill[]
 }
 
+type Homepage = {
+  name: localeString
+  text: localePortableText
+}
 
 type Skills = {
   title: localeString
@@ -66,6 +70,11 @@ type Skill = {
 type localeString = {
   en: string
   uk: string
+}
+
+type localePortableText = {
+  en: Any
+  uk: Any
 }
 
 type file = {

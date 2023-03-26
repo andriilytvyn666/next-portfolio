@@ -1,7 +1,4 @@
 {
-  "home": {
-    "name": "Andrii Lytvyn"
-  },
   "header": {
     "home": "Home",
     "skills": "Skills",
@@ -9,7 +6,8 @@
     "courses": "Edu"
   },
   "footer": {
-    "location": "Lviv, Ukraine"
+    "location": "Lviv, Ukraine",
+    "name": "Andrii Lytvyn"
   },
   "courses": {
     "degrees": {

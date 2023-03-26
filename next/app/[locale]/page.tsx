@@ -1,5 +1,6 @@
-import { useTranslations } from 'next-intl'
+import { PortableText, PortableTextComponents } from '@portabletext/react'
 import { Link } from 'next-intl'
+import { useLocale } from 'next-intl'
 import PlainLink from 'next/link'
 import { IoDocumentOutline } from 'react-icons/io5'
 import {
@@ -10,59 +11,54 @@ import {
   SiTelegram,
 } from 'react-icons/si'
 
+import client, {
+  getLocalizedPortableText,
+  getLocalizedString,
+} from '../../client'
 import ButtonLink from '../components/ButtonLink'
 
-export default function Home() {
-  const t = useTranslations('home')
+export default async function Home() {
+  const data = await client.fetch<Homepage>(`*[_type == "homepage"][0]`)
+  const locale = useLocale()
+
+  const portableTextComponents: PortableTextComponents = {
+    marks: {
+      link: ({ value, children }) => {
+        const target = (value?.href || '').startsWith('http')
+          ? '_blank'
+          : undefined
+        if (target === '_blank') {
+          return (
+            <PlainLink className="link" href={value?.href}>
+              {children}
+            </PlainLink>
+          )
+        } else {
+          return (
+            <Link className="link" href={value?.href}>
+              {children}
+            </Link>
+          )
+        }
+      },
+    },
+    block: {
+      normal: ({ children }) => (
+        <p className="text-fg-secondary text-body">{children}</p>
+      ),
+    },
+  }
 
   return (
     <>
       <h1 className="text-center text-headerXl text-fg md:text-left">
-        {t('name')}
+        {getLocalizedString(locale, data.name)}
       </h1>
       <div className="flex flex-col gap-[24px] text-body text-fg-secondary">
-        <p>
-          Hi there! My name is Andrii Lytvyn, and I am a 3rd-year student of CS
-          & AI at{' '}
-          <PlainLink href="https://lpnu.ua/en" className="link" target="_blank">
-            Lviv Polytechnic National University
-          </PlainLink>
-          .
-        </p>
-        <p>
-          Creating UI designs in Figma and bringing them to life is my passion.
-          I have been working with Next.js 13, Nuxt 3, and Tailwind CSS lately.
-          Here you can find{' '}
-          <Link href="/projects" className="link">
-            my projects
-          </Link>
-          .
-        </p>
-        <p>
-          Aside from that, I have some valuable experience with other tools &
-          languages. Learn more on the{' '}
-          <Link href="/projects" className="link">
-            skills page
-          </Link>
-          .
-        </p>
-        <p>
-          Outside of the computer world, I enjoy Ukrainian underground music. In
-          the future, I would like to create a project to showcase interesting
-          musicians because some deserve much more attention.
-        </p>
-        <p>
-          Feel free to contact me at any time. Below you could find my contacts
-          and{' '}
-          <PlainLink
-            href="https://github.com/andriilytvyn666"
-            target="_blank"
-            className="link"
-          >
-            CV
-          </PlainLink>
-          .
-        </p>
+        <PortableText
+          value={getLocalizedPortableText(locale, data.text)}
+          components={portableTextComponents}
+        />
       </div>
 
       <div className="grid gap-4 sm:flex sm:flex-wrap">
