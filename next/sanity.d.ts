@@ -50,6 +50,7 @@ type SkillGroup = {
 type Homepage = {
   name: localeString
   text: localePortableText
+  links: link[]
 }
 
 type Skills = {
@@ -83,4 +84,10 @@ type file = {
 
 type image = {
   asset: { _ref: string }
+}
+
+type link = {
+  name: localeString
+  internalName: string
+  link: string
 }

@@ -1,8 +1,8 @@
 import {Rule} from 'sanity'
 
 export default {
-  name: 'homepage',
-  title: 'Home Page',
+  name: 'link',
+  title: 'Link',
   type: 'document',
   fields: [
     {
@@ -11,14 +11,14 @@ export default {
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'text',
-      type: 'localePortableText',
+      name: 'internalName',
+      type: 'string',
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'links',
-      type: 'array',
-      of: [{type: 'link'}],
+      name: 'link',
+      type: 'string',
+      validation: (rule: Rule) => rule.required(),
     },
   ],
 }

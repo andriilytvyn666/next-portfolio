@@ -2,7 +2,9 @@ import { PortableText, PortableTextComponents } from '@portabletext/react'
 import { Link } from 'next-intl'
 import { useLocale } from 'next-intl'
 import PlainLink from 'next/link'
-import { IoDocumentOutline } from 'react-icons/io5'
+import { ReactNode } from 'react'
+import { AiOutlineFilePdf, AiOutlineFileWord } from 'react-icons/ai'
+import { FiArrowUpRight } from 'react-icons/fi'
 import {
   SiGithub,
   SiGmail,
@@ -49,6 +51,27 @@ export default async function Home() {
     },
   }
 
+  const selectIcon = (name: string): ReactNode => {
+    switch (name) {
+      case 'github':
+        return <SiGithub className="w-full h-full" />
+      case 'linkedin':
+        return <SiLinkedin className="w-full h-full" />
+      case 'gmail':
+        return <SiGmail className="w-full h-full" />
+      case 'skype':
+        return <SiSkype className="w-full h-full" />
+      case 'telegram':
+        return <SiTelegram className="w-full h-full" />
+      case 'resumePdf':
+        return <AiOutlineFilePdf className="w-full h-full" />
+      case 'resumeDocx':
+        return <AiOutlineFileWord className="w-full h-full" />
+      default:
+        return <FiArrowUpRight className="w-full h-full" />
+    }
+  }
+
   return (
     <>
       <h1 className="text-center text-headerXl text-fg md:text-left">
@@ -62,30 +85,17 @@ export default async function Home() {
       </div>
 
       <div className="grid gap-4 sm:flex sm:flex-wrap">
-        <ButtonLink link="mailto:lytvyn.andrii.contact@gmail.com" title="Gmail">
-          <SiGmail className="w-full h-full" />
-        </ButtonLink>
-        <ButtonLink link="https://t.me/nneeeooo" title="Telegram">
-          <SiTelegram className="w-full h-full" />
-        </ButtonLink>
-        <ButtonLink
-          link="https://join.skype.com/invite/KOwuCulY372x"
-          title="Skype"
-        >
-          <SiSkype className="w-full h-full" />
-        </ButtonLink>
-        <ButtonLink
-          link="https://www.linkedin.com/in/andrii-lytvyn-80350a226/"
-          title="LinkedIn"
-        >
-          <SiLinkedin className="w-full h-full" />
-        </ButtonLink>
-        <ButtonLink link="https://github.com/andriilytvyn666" title="Github">
-          <SiGithub className="w-full h-full" />
-        </ButtonLink>
-        <ButtonLink link="https://github.com/andriilytvyn666" title="CV">
-          <IoDocumentOutline className="w-full h-full" />
-        </ButtonLink>
+        {data.links.map((link, index) => {
+          return (
+            <ButtonLink
+              key={index}
+              title={getLocalizedString(locale, link.name)}
+              link={link.link}
+            >
+              {selectIcon(link.internalName)}
+            </ButtonLink>
+          )
+        })}
       </div>
     </>
   )

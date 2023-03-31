@@ -11,7 +11,6 @@ export default defineConfig({
   dataset: 'production',
 
   plugins: [
-    vercelDeployTool(),
     deskTool({
       structure: (S) =>
         S.list()
@@ -46,6 +45,7 @@ export default defineConfig({
             ),
           ]),
     }),
+    vercelDeployTool(),
     visionTool(),
   ],
 
