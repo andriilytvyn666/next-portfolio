@@ -15,7 +15,9 @@ import client from '../client'
 import ButtonLink from './components/ButtonLink'
 
 export default async function Home() {
-  const data = await client.fetch<Homepage>(`*[_type == "homepage"][0]`)
+  const data = await client.fetch<Homepage>(`*[_type == "homepage"][0]`, {
+    next: { cache: 'force-cache' },
+  })
 
   const portableTextComponents: PortableTextComponents = {
     marks: {
@@ -87,3 +89,13 @@ export default async function Home() {
     </>
   )
 }
+
+// export async function getStaticProps() {
+//   const content = await client.fetch<Homepage>(`*[_type == "homepage"][0]`)
+
+//   return {
+//     props: {
+//       content,
+//     },
+//   }
+// }

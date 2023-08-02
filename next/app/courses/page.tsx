@@ -9,7 +9,10 @@ import PageHead from '../components/PageHead'
 
 export default async function Courses() {
   const data = await client.fetch<CoursesEducation>(
-    `*[_type == "coursesEducation"][0]`
+    `*[_type == "coursesEducation"][0]`,
+    {
+      next: { cache: 'force-cache' },
+    }
   )
 
   const builder = imageUrlBuilder(client)

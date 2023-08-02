@@ -6,7 +6,9 @@ import Skill from '../components/Skill'
 import SkillGroup from '../components/SkillGroup'
 
 export default async function Skills() {
-  const data = await client.fetch<Skills>(`*[_type == "skills"][0]`)
+  const data = await client.fetch<Skills>(`*[_type == "skills"][0]`, {
+    next: { cache: 'force-cache' },
+  })
 
   return (
     <>

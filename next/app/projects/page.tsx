@@ -7,7 +7,9 @@ import CardGroup from '../components/CardGroup'
 import PageHead from '../components/PageHead'
 
 export default async function Projects() {
-  const data = await client.fetch<Projects>(`*[_type == "projects"][0]`)
+  const data = await client.fetch<Projects>(`*[_type == "projects"][0]`, {
+    next: { cache: 'force-cache' },
+  })
   const builder = imageUrlBuilder(client)
 
   return (
