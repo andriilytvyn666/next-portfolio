@@ -17,10 +17,7 @@ export const metadata: Metadata = {
   icons: {
     shortcut: '/favicon.ico',
     icon: '/favicon-32x32.png',
-    apple: '/apple-touch-icon.png',
   },
-  manifest: '/site.webmanifest',
-  themeColor: '#000000',
 }
 
 type Props = {
