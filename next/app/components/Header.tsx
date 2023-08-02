@@ -1,9 +1,9 @@
 'use client'
 
-import { Link } from 'next-intl'
-import { usePathname } from 'next-intl/client'
 import Image from 'next/image'
 import NavLink from 'next/link'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 import styles from './Header.module.css'
@@ -34,12 +34,20 @@ export default function Header({ navNames, locale }: Props) {
     <header className={styles['header']}>
       <nav className={styles['header-nav']}>
         <NavLink href="/">
-          <Image
+          {/* <Image
             src={`/emoji${getImageName(pathname)}.png`}
             alt="logo"
             width={48}
             height={48}
             unoptimized
+          /> */}
+          <Image
+            src={`/images/logo.png`}
+            alt="logo"
+            width={88}
+            height={31}
+            unoptimized
+            className="border border-fg-secondary"
           />
         </NavLink>{' '}
         <div className="flex">

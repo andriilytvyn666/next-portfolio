@@ -1,6 +1,6 @@
 type Project = {
-  title: localeString
-  subtitle: localeString
+  title: string
+  subtitle: string
   link: string
   image: image
 }
@@ -14,9 +14,9 @@ type Course = {
 }
 
 type Education = {
-  name: localeString
-  degree: localeString
-  major: localeString
+  name: string
+  degree: string
+  major: string
   link: string
   dateStarted: string
   dateFinished: string
@@ -24,10 +24,10 @@ type Education = {
 }
 
 type CoursesEducation = {
-  titleCourses: localeString
-  subtitle: localeString
+  titleCourses: string
+  subtitle: string
   courses: Course[]
-  titleEducation: localeString
+  titleEducation: string
   educationList: Education[]
 }
 
@@ -37,8 +37,8 @@ type ProjectGroup = {
 }
 
 type Projects = {
-  title: localeString
-  subtitle: localeString
+  title: string
+  subtitle: string
   projectGroups: ProjectGroup[]
 }
 
@@ -48,14 +48,14 @@ type SkillGroup = {
 }
 
 type Homepage = {
-  name: localeString
-  text: localePortableText
+  name: string
+  text: any // ??
   links: link[]
 }
 
 type Skills = {
-  title: localeString
-  subtitle: localeString
+  title: string
+  subtitle: string
   skillGroups: SkillGroup[]
 }
 
@@ -68,16 +68,6 @@ type Skill = {
   name: string
 }
 
-type localeString = {
-  en: string
-  uk: string
-}
-
-type localePortableText = {
-  en: Any
-  uk: Any
-}
-
 type file = {
   asset: { _ref: string }
 }
@@ -87,7 +77,6 @@ type image = {
 }
 
 type link = {
-  name: localeString
-  internalName: string
+  name: string
   link: string
 }

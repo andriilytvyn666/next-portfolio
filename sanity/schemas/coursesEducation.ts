@@ -7,12 +7,12 @@ export default {
   fields: [
     {
       name: 'titleCourses',
-      type: 'localeString',
+      type: 'string',
       validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'subtitle',
-      type: 'localeString',
+      type: 'string',
       validation: (rule: Rule) => rule.required(),
     },
     {
@@ -23,7 +23,7 @@ export default {
     },
     {
       name: 'titleEducation',
-      type: 'localeString',
+      type: 'string',
       validation: (rule: Rule) => rule.required(),
     },
     {

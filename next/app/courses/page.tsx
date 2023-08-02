@@ -1,13 +1,11 @@
 import { buildFileUrl } from '@sanity/asset-utils'
 import imageUrlBuilder from '@sanity/image-url'
-import { useLocale } from 'next-intl'
-import { useTranslations } from 'next-intl'
 import React from 'react'
 
-import client, { dataset, getLocalizedString, projectId } from '../../../client'
-import Card from '../../components/Card'
-import CardGroup from '../../components/CardGroup'
-import PageHead from '../../components/PageHead'
+import client, { dataset, projectId } from '../../client'
+import Card from '../components/Card'
+import CardGroup from '../components/CardGroup'
+import PageHead from '../components/PageHead'
 
 export default async function Courses() {
   const data = await client.fetch<CoursesEducation>(
@@ -15,16 +13,13 @@ export default async function Courses() {
   )
 
   const builder = imageUrlBuilder(client)
-  // const locale = 'en-us'
-  const locale = useLocale()
-
-  // TODO: change date format based on i18n locale (when i18n added)
+  // TODO: refactor date parsing
   return (
     <>
       <div className="flex flex-col gap-8">
         <PageHead
-          title={getLocalizedString(locale, data.titleCourses)}
-          subtitle={getLocalizedString(locale, data.subtitle)}
+          title={data.titleCourses}
+          subtitle={data.subtitle}
           className="lg:col-span-2"
         />
         <CardGroup>
@@ -35,7 +30,7 @@ export default async function Courses() {
                 title={course.name}
                 subtitle={`${course.provider} · ${new Date(
                   course.dateFinished
-                ).toLocaleDateString(locale, {
+                ).toLocaleDateString('en', {
                   month: 'short',
                   year: 'numeric',
                 })}`}
@@ -55,23 +50,16 @@ export default async function Courses() {
         </CardGroup>
       </div>
       <div className="flex flex-col gap-6">
-        <PageHead
-          title={getLocalizedString(locale, data.titleEducation)}
-          className="lg:col-span-2"
-        />
+        <PageHead title={data.titleEducation} className="lg:col-span-2" />
         <CardGroup singleCol={true}>
           {data.educationList.map((education, index) => {
             return (
               <Card
                 key={index}
-                title={getLocalizedString(locale, education.name)}
-                subtitle={`${getLocalizedString(
-                  locale,
-                  education.degree
-                )} · ${getLocalizedString(
-                  locale,
+                title={education.name}
+                subtitle={`${education.degree} · ${
                   education.major
-                )}  · ${new Date(
+                }  · ${new Date(
                   education.dateStarted
                 ).getFullYear()}-${new Date(
                   education.dateFinished

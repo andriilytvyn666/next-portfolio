@@ -7,12 +7,13 @@ export default {
   fields: [
     {
       name: 'name',
-      type: 'localeString',
+      type: 'string',
       validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'text',
-      type: 'localePortableText',
+      type: 'array',
+      of: [{type: 'block'}],
       validation: (rule: Rule) => rule.required(),
     },
     {

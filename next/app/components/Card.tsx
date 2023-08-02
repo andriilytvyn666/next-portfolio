@@ -1,4 +1,3 @@
-import imageUrlBuilder from '@sanity/image-url'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'

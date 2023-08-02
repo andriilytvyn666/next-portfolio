@@ -7,17 +7,17 @@ export default {
   fields: [
     {
       name: 'name',
-      type: 'localeString',
+      type: 'string',
       validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'degree',
-      type: 'localeString',
+      type: 'string',
       validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'major',
-      type: 'localeString',
+      type: 'string',
       validation: (rule: Rule) => rule.required(),
     },
     {

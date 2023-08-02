@@ -1,13 +1,11 @@
 import { Metadata } from 'next'
-import { useLocale } from 'next-intl'
-import { useTranslations } from 'next-intl'
 import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
 
-import Debug from '../components/Debug'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import '../globals.css'
+import Debug from './components/Debug'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import './globals.css'
 import styles from './layout.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -33,30 +31,21 @@ type Props = {
 }
 
 export default function RootLayout({ children, params }: Props) {
-  const locale = useLocale()
-
-  if (params.locale !== locale) {
-    notFound()
-  }
-
-  const t = useTranslations('header')
-  const tFooter = useTranslations('footer')
-
   return (
-    <html lang={locale}>
+    <html lang="en">
       <body className={inter.className}>
         {/* <Debug /> */}
         <div className="flex flex-col items-center flex-grow min-h-screen gap-12 pt-8 md:pt-4 bg-bg">
           <Header
             locale={params.locale}
-            navNames={[t('home'), t('skills'), t('projects'), t('courses')]}
+            navNames={['Home', 'Skills', 'Projects', 'Courses']}
           />
           <article
             className={`grid items-stretch justify-center w-full grid-cols-10 gap-5 px-4 grow mx-auto ${styles['article']}`}
           >
             <div className="flex flex-col col-span-10 gap-8">{children}</div>
           </article>
-          <Footer name={tFooter('name')} location={tFooter('location')} />
+          <Footer name={'Andrii Lytvyn'} />
         </div>
       </body>
     </html>
