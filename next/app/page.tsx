@@ -1,8 +1,9 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Link from 'next/link'
 import { ReactNode } from 'react'
-import { AiOutlineFilePdf, AiOutlineFileWord } from 'react-icons/ai'
 import { FiArrowUpRight } from 'react-icons/fi'
+import { MdEmail } from 'react-icons/md'
+import { RiFileWord2Fill } from 'react-icons/ri'
 import {
   SiGithub,
   SiGmail,
@@ -10,6 +11,7 @@ import {
   SiSkype,
   SiTelegram,
 } from 'react-icons/si'
+import { TbPdf } from 'react-icons/tb'
 
 import client from '../client'
 import ButtonLink from './components/ButtonLink'
@@ -54,15 +56,15 @@ export default async function Home() {
       case 'Linkedin':
         return <SiLinkedin className="w-full h-full" />
       case 'Email':
-        return <SiGmail className="w-full h-full" />
+        return <MdEmail className="w-full h-full" />
       case 'Skype':
         return <SiSkype className="w-full h-full" />
       case 'Telegram':
         return <SiTelegram className="w-full h-full" />
       case 'Resume.pdf':
-        return <AiOutlineFilePdf className="w-full h-full" />
+        return <TbPdf className="w-full h-full" />
       case 'Resume.docx':
-        return <AiOutlineFileWord className="w-full h-full" />
+        return <RiFileWord2Fill className="w-full h-full" />
       default:
         return <FiArrowUpRight className="w-full h-full" />
     }
@@ -89,13 +91,3 @@ export default async function Home() {
     </>
   )
 }
-
-// export async function getStaticProps() {
-//   const content = await client.fetch<Homepage>(`*[_type == "homepage"][0]`)
-
-//   return {
-//     props: {
-//       content,
-//     },
-//   }
-// }

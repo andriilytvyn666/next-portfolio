@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { notFound } from 'next/navigation'
 
 import Debug from './components/Debug'
 import Footer from './components/Footer'
@@ -13,10 +12,16 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Andrii Lytvyn',
   description:
-    'I am a web developer from Ukraine. Interested mainly in Vue, React & UI/UX.',
+    'A web developer from Ukraine. Interested in UI/UX, React & Vue.',
   icons: {
     shortcut: '/favicon.ico',
     icon: '/favicon-32x32.png',
+  },
+  openGraph: {
+    title: 'Andrii Lytvyn',
+    description:
+      'A web developer from Ukraine. Interested in UI/UX, React & Vue.',
+    url: 'https://andriilytvyn.pp.ua',
   },
 }
 
