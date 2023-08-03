@@ -52,21 +52,21 @@ export default async function Home() {
   const selectIcon = (name: string): ReactNode => {
     switch (name) {
       case 'Github':
-        return <SiGithub className="w-full h-full" />
+        return <SiGithub className="w-full h-full fill-fg" />
       case 'Linkedin':
-        return <SiLinkedin className="w-full h-full" />
+        return <SiLinkedin className="w-full h-full fill-fg" />
       case 'Email':
-        return <MdEmail className="w-full h-full" />
+        return <MdEmail className="w-full h-full fill-fg" />
       case 'Skype':
-        return <SiSkype className="w-full h-full" />
+        return <SiSkype className="w-full h-full fill-fg" />
       case 'Telegram':
-        return <SiTelegram className="w-full h-full" />
+        return <SiTelegram className="w-full h-full fill-fg" />
       case 'Resume.pdf':
-        return <TbPdf className="w-full h-full" />
+        return <TbPdf className="w-full h-full fill-fg" />
       case 'Resume.docx':
-        return <RiFileWord2Fill className="w-full h-full" />
+        return <RiFileWord2Fill className="w-full h-full fill-fg" />
       default:
-        return <FiArrowUpRight className="w-full h-full" />
+        return <FiArrowUpRight className="w-full h-full fill-fg" />
     }
   }
 

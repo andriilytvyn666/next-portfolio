@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +12,8 @@
   * {
     @apply transition-all duration-300 ease-in-out;
     @apply selection:bg-[#282828];
+    @apply text-fg-secondary;
+    font-family: 'Inter', sans-serif;
   }
 
   h1 {
