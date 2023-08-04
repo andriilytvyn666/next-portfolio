@@ -23,7 +23,9 @@ export default function Card({ title, subtitle, url, imageUrl }: Props) {
         />
         <div className="flex flex-col gap-1 truncate">
           <h4 className="truncate text-fg">{title}</h4>
-          <h5 className="truncate text-fg-secondary">{subtitle}</h5>
+          <span className="truncate text-itemSubtitle text-fg-secondary">
+            {subtitle}
+          </span>
         </div>
       </div>
     </Link>

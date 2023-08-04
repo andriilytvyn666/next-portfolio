@@ -1,17 +1,11 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Link from 'next/link'
 import { ReactNode } from 'react'
+import { BsFillFilePdfFill } from 'react-icons/bs'
 import { FiArrowUpRight } from 'react-icons/fi'
 import { MdEmail } from 'react-icons/md'
 import { RiFileWord2Fill } from 'react-icons/ri'
-import {
-  SiGithub,
-  SiGmail,
-  SiLinkedin,
-  SiSkype,
-  SiTelegram,
-} from 'react-icons/si'
-import { TbPdf } from 'react-icons/tb'
+import { SiGithub, SiLinkedin, SiSkype, SiTelegram } from 'react-icons/si'
 
 import client from '../client'
 import ButtonLink from './components/ButtonLink'
@@ -62,7 +56,7 @@ export default async function Home() {
       case 'Telegram':
         return <SiTelegram className="w-full h-full fill-fg" />
       case 'Resume.pdf':
-        return <TbPdf className="w-full h-full fill-fg" />
+        return <BsFillFilePdfFill className="w-full h-full fill-fg" />
       case 'Resume.docx':
         return <RiFileWord2Fill className="w-full h-full fill-fg" />
       default:

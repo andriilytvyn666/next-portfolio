@@ -3,4 +3,5 @@
   @apply text-fg border-bg-active;
   @apply hover:bg-bg-active border hover:border-fg-secondary;
   @apply hover:-translate-y-1;
+  @apply w-full;
 }

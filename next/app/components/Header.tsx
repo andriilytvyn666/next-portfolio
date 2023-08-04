@@ -50,13 +50,13 @@ export default function Header({ navNames, locale }: Props) {
             className="border border-fg-secondary"
           />
         </NavLink>{' '}
-        <div className="flex">
+        <div className="flex flex-wrap justify-center gap-2 py-4">
           {links.map((link, index) => (
             <Link
               href={link.link}
               key={link.name}
-              className={`select-none text-itemNav  px-2.5 hover:text-fg hover:translate-y-1 ${
-                link.link === pathname && 'text-fg'
+              className={`border border-bg-active hover:border-fg-secondary rounded-md select-none text-itemNav px-2 hover:text-fg hover:translate-y-1 ${
+                link.link === pathname && 'text-fg bg-bg-active'
               }`}
             >
               {navNames[index]}

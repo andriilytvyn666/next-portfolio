@@ -12,7 +12,7 @@ export default function Footer({ name }: Props) {
   return (
     <footer className={styles['footer']}>
       <span className="text-footer text-fg-secondary">
-        Copyright © {new Date().getFullYear()} Andrii Lytvyn
+        © {new Date().getFullYear()} Andrii Lytvyn
       </span>
       <Image
         src={`/images/underconstruction.png`}

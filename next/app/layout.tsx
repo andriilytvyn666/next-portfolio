@@ -37,7 +37,7 @@ export default function RootLayout({ children, params }: Props) {
     <html lang="en">
       <body className={inter.className}>
         {/* <Debug /> */}
-        <div className="flex flex-col items-center flex-grow min-h-screen gap-12 pt-8 md:pt-4 bg-bg">
+        <div className="flex flex-col items-center flex-grow min-h-screen gap-4 pt-8 md:gap-12 md:pt-4 bg-bg">
           <Header
             locale={params.locale}
             navNames={['Home', 'Skills', 'Projects', 'Courses']}

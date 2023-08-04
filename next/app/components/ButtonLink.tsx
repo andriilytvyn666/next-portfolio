@@ -12,10 +12,10 @@ type Props = {
 export default function ButtonLink({ title, children, link }: Props) {
   return (
     <Link href={link} target="_blank">
-      <div className={styles['button-link']}>
+      <button className={styles['button-link']}>
         <div className="w-5 h-5">{children}</div>
         <span className="text-fg">{title}</span>
-      </div>
+      </button>
     </Link>
   )
 }
