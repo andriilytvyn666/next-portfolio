@@ -40,7 +40,7 @@ export default function RootLayout({ children, params }: Props) {
         <div className="flex flex-col items-center flex-grow min-h-screen gap-4 pt-8 md:gap-12 md:pt-4 bg-bg">
           <Header
             locale={params.locale}
-            navNames={['Home', 'Skills', 'Projects', 'Courses']}
+            navNames={['Home', 'Skills', 'Projects', 'Courses', 'Blog']}
           />
           <article
             className={`grid items-stretch justify-center w-full grid-cols-10 gap-5 px-4 grow mx-auto ${styles['article']}`}

@@ -13,6 +13,7 @@ const links = [
   { name: 'skills', link: '/skills' },
   { name: 'projects', link: '/projects' },
   { name: 'courses', link: '/courses' },
+  { name: 'blog', link: '/posts' },
 ]
 
 type Props = {
@@ -20,27 +21,13 @@ type Props = {
   locale: string
 }
 
-const getImageName = (pathname: string | null): string => {
-  if (pathname === null) {
-    return '/home'
-  }
-  return pathname.endsWith('/') ? '/home' : pathname
-}
-
-export default function Header({ navNames, locale }: Props) {
+export default function Header({ navNames }: Props) {
   const pathname = usePathname()
 
   return (
     <header className={styles['header']}>
       <nav className={styles['header-nav']}>
         <NavLink href="/">
-          {/* <Image
-            src={`/emoji${getImageName(pathname)}.png`}
-            alt="logo"
-            width={48}
-            height={48}
-            unoptimized
-          /> */}
           <Image
             src={`/images/logo.png`}
             alt="logo"
