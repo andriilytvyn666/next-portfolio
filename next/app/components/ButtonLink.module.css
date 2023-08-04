@@ -1,7 +1,7 @@
 .button-link {
-  @apply items-center flex px-6 py-3 gap-2.5 rounded-lg;
+  @apply items-center justify-center flex  py-3 gap-2.5 rounded-lg;
   @apply text-fg border-bg-active;
   @apply hover:bg-bg-active border hover:border-fg-secondary;
   @apply hover:-translate-y-1;
-  @apply w-full;
+  @apply w-full min-h-[3rem] min-w-[3rem] max-h-[3rem];
 }
