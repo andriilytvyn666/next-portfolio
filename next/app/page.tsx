@@ -45,7 +45,6 @@ export default async function Home() {
       <div className="flex flex-col gap-[24px] text-body text-fg-secondary">
         <PortableText value={data.text} components={portableTextComponents} />
       </div>
-      {/* flex flex-col items-center w-full gap-4 md:justify-between md:flex-row */}
       <div className="grid grid-cols-1 grid-rows-2 gap-4 md:flex md:justify-between">
         <div className="grid grid-cols-4 gap-4">
           {data.links.slice(0, 4).map((link, index) => {

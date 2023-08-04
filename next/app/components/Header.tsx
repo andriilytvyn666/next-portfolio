@@ -10,10 +10,10 @@ import styles from './Header.module.css'
 
 const links = [
   { name: 'home', link: '/' },
-  { name: 'skills', link: '/skills' },
+  // { name: 'skills', link: '/skills' },
   { name: 'projects', link: '/projects' },
-  { name: 'courses', link: '/courses' },
-  { name: 'blog', link: '/posts' },
+  // { name: 'courses', link: '/courses' },
+  { name: 'posts', link: '/posts' },
 ]
 
 type Props = {
