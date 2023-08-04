@@ -1,6 +1,7 @@
 .footer {
-  @apply flex flex-col items-center justify-center;
-  @apply w-full gap-2 h-32;
+  @apply flex flex-row items-center justify-between;
+  @apply w-full gap-2 h-20;
+  @apply px-4;
 }
 
 .locale-link {

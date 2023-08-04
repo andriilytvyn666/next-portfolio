@@ -1,18 +1,13 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 
 import styles from './Footer.module.css'
 
-type Props = {
-  name: string
-}
-
-export default function Footer({ name }: Props) {
+export default function Footer() {
   return (
     <footer className={styles['footer']}>
       <span className="text-footer text-fg-secondary">
-        Copyright © {new Date().getFullYear()} Andrii Lytvyn
+        © 2023 Andrii Lytvyn
       </span>
       <Image
         src={`/images/underconstruction.png`}

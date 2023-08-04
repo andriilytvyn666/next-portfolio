@@ -10,9 +10,10 @@ import styles from './Header.module.css'
 
 const links = [
   { name: 'home', link: '/' },
-  { name: 'skills', link: '/skills' },
+  // { name: 'skills', link: '/skills' },
   { name: 'projects', link: '/projects' },
-  { name: 'courses', link: '/courses' },
+  // { name: 'courses', link: '/courses' },
+  { name: 'posts', link: '/posts' },
 ]
 
 type Props = {
@@ -20,27 +21,13 @@ type Props = {
   locale: string
 }
 
-const getImageName = (pathname: string | null): string => {
-  if (pathname === null) {
-    return '/home'
-  }
-  return pathname.endsWith('/') ? '/home' : pathname
-}
-
-export default function Header({ navNames, locale }: Props) {
+export default function Header({ navNames }: Props) {
   const pathname = usePathname()
 
   return (
     <header className={styles['header']}>
       <nav className={styles['header-nav']}>
         <NavLink href="/">
-          {/* <Image
-            src={`/emoji${getImageName(pathname)}.png`}
-            alt="logo"
-            width={48}
-            height={48}
-            unoptimized
-          /> */}
           <Image
             src={`/images/logo.png`}
             alt="logo"
@@ -50,13 +37,13 @@ export default function Header({ navNames, locale }: Props) {
             className="border border-fg-secondary"
           />
         </NavLink>{' '}
-        <div className="flex">
+        <div className="flex flex-wrap justify-center gap-2 py-4">
           {links.map((link, index) => (
             <Link
               href={link.link}
               key={link.name}
-              className={`select-none text-itemNav  px-2.5 hover:text-fg hover:translate-y-1 ${
-                link.link === pathname && 'text-fg'
+              className={`border border-bg-active hover:border-fg-secondary rounded-md select-none text-itemNav px-2 hover:text-fg hover:translate-y-1 ${
+                link.link === pathname && 'text-fg bg-bg-active'
               }`}
             >
               {navNames[index]}

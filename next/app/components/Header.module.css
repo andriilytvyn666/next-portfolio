@@ -1,10 +1,10 @@
 .header {
-  @apply w-full h-20;
+  @apply w-full md:h-20;
 }
 
 .header-nav {
-  @apply flex justify-center items-center h-full;
-  @apply flex-col gap-4 text-fg-secondary;
+  @apply flex justify-between items-center h-full;
+  @apply flex-col px-2 text-fg-secondary;
 }
 
 @screen sm {
@@ -18,7 +18,7 @@
     @apply w-[46rem];
   }
   .header-nav {
-    @apply justify-between flex-row gap-0;
+    @apply justify-between flex-row gap-0 items-center;
   }
 }
 
