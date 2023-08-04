@@ -48,16 +48,8 @@ export default async function Home() {
       {/* flex flex-col items-center w-full gap-4 md:justify-between md:flex-row */}
       <div className="grid grid-cols-1 grid-rows-2 gap-4 md:flex md:justify-between">
         <div className="grid grid-cols-4 gap-4">
-          {data.links.map((link, index) => {
-            return (
-              <>
-                {link.name !== 'Resume' ? (
-                  <ButtonLink key={index} title={link.name} link={link.link} />
-                ) : (
-                  ''
-                )}
-              </>
-            )
+          {data.links.slice(0, 4).map((link, index) => {
+            return <ButtonLink key={index} title={link.name} link={link.link} />
           })}
         </div>
         <div className="w-full md:w-fit">

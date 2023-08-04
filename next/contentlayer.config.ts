@@ -2,7 +2,6 @@ import { MDXOptions } from 'contentlayer/core'
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
-import remarkToc, { Options } from 'remark-toc'
 
 const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -28,15 +27,8 @@ const Post = defineDocumentType(() => ({
   },
 }))
 
-const tocOptions: Options = {
-  heading: 'contents',
-  maxDepth: 3,
-  ordered: true,
-  tight: true,
-}
-
 const mdxOptions: MDXOptions = {
-  remarkPlugins: [remarkGfm, [remarkToc, tocOptions]],
+  remarkPlugins: [remarkGfm],
   rehypePlugins: [rehypeSlug],
 }
 

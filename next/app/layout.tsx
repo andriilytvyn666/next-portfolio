@@ -47,7 +47,7 @@ export default function RootLayout({ children, params }: Props) {
           >
             <div className="flex flex-col col-span-10 gap-8">{children}</div>
           </article>
-          <Footer name={'Andrii Lytvyn'} />
+          <Footer />
         </div>
       </body>
     </html>
