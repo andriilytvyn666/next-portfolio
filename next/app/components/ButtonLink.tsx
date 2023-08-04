@@ -35,11 +35,7 @@ const selectIcon = (name: string): ReactNode => {
 
 export default function ButtonLink({ title, link }: Props) {
   return (
-    <Link
-      href={link}
-      target="_blank"
-      className={`${title === 'Resume' ? 'ml-auto' : ''}`}
-    >
+    <Link href={link} target="_blank">
       <button
         className={`${styles['button-link']} ${
           title == 'Resume' ? 'px-4 bg-fg hover:bg-fg-secondary' : 'px-3'

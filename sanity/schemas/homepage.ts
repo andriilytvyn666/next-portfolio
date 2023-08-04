@@ -1,5 +1,7 @@
 import {Rule} from 'sanity'
 
+// TODO: move resume link to separate field
+
 export default {
   name: 'homepage',
   title: 'Home Page',
