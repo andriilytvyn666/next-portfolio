@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
     icon: '/favicon-32x32.png',
   },
+  metadataBase: new URL('https://andriilytvyn.pp.ua'),
   openGraph: {
     title: 'Andrii Lytvyn',
     description:
