@@ -37,24 +37,5 @@ export default async function Home() {
     },
   }
 
-  return (
-    <>
-      <h1 className="text-center text-headerXl text-fg md:text-left">
-        {data.name}
-      </h1>
-      <div className="flex flex-col gap-[24px] text-body text-fg-secondary">
-        <PortableText value={data.text} components={portableTextComponents} />
-      </div>
-      <div className="grid grid-cols-1 grid-rows-2 gap-4 md:flex md:justify-between">
-        <div className="grid grid-cols-4 gap-4">
-          {data.links.slice(0, 4).map((link, index) => {
-            return <ButtonLink key={index} title={link.name} link={link.link} />
-          })}
-        </div>
-        <div className="w-full md:w-fit">
-          <ButtonLink title={data.links[4].name} link={data.links[4].link} />
-        </div>
-      </div>
-    </>
-  )
+  return <>hello</>
 }

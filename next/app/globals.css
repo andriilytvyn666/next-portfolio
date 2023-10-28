@@ -55,6 +55,10 @@
     @apply text-fg border-b border-[#292929] hover:border-[#bbbbbb];
     @apply inline-flex items-center gap-1.5;
   }
+
+  .text-clickable {
+    @apply underline decoration-bg hover:decoration-fg-active hover:text-fg-active;
+  }
 }
 
 @layer utilities {

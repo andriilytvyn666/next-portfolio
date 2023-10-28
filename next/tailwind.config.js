@@ -7,6 +7,28 @@ module.exports = {
   ],
   theme: {
     fontSize: {
+      title: [
+        '1.5rem',
+        {
+          lineHeight: '1.75rem',
+          fontWeight: '600'
+        }
+      ],
+      subtitle: [
+        '1.25rem',
+        {
+          lineHeight: '1.5rem',
+          fontWeight: '600'
+        }
+      ],
+      body: [
+        '1rem',
+        {
+          lineHeight: '1.25rem',
+          fontWeight: '600',
+        }
+      ],
+
       itemTitle: [
         '1.125rem',
         {
@@ -73,13 +95,18 @@ module.exports = {
     },
     colors: {
       bg: {
-        DEFAULT: '#050505',
-        active: '#212121',
+        DEFAULT: '#0E0E0E',
+        active: '#252525',
       },
       fg: {
-        DEFAULT: '#FFFFFF',
+        DEFAULT: '#8B8B8B',
+        active: '#F8F8F8',
         secondary: '#838383',
       },
+      border: {
+        DEFAULT: '#494949',
+        active: '#AEAEAE',
+      }
     },
     extend: {
       screens: {
