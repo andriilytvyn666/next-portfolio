@@ -30,7 +30,6 @@ export default async function Projects() {
                     url={project.link}
                     title={project.title}
                     subtitle={project.subtitle}
-                    imageUrl={builder.image(project.image).url()}
                   />
                 )
               })}
