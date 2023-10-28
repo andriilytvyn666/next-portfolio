@@ -37,7 +37,6 @@ export default async function Courses() {
                   month: 'short',
                   year: 'numeric',
                 })}`}
-                imageUrl={builder.image(course.image).url()}
                 // it seems library is a bit outdates, replace calls required for it to work
                 url={buildFileUrl({
                   assetId: course.certificate.asset._ref
