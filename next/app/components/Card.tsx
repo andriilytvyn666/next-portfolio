@@ -6,26 +6,28 @@ type Props = {
   title: string
   subtitle: string
   url: string
-  imageUrl: string
+  // imageUrl: string
 }
 
-export default function Card({ title, subtitle, url, imageUrl }: Props) {
+export default function Card({ title, subtitle, url }: Props) {
   return (
-    <Link href={url} target="_blank" className="w-full h-20">
-      <div className="flex gap-4 p-4 border rounded-lg hover:bg-bg-active border-bg-active">
-        <Image
-          unoptimized
-          src={imageUrl}
-          width="48"
-          height="48"
-          className="w-12 h-12 rounded-lg min-w-12 min-h-12"
-          alt="rihter-logo"
-        />
+    <Link href={url} target="_blank" className="">
+      <div className="flex flex-col gap-4 group">
+        <div className="w-[24.75rem] aspect-video bg-bg-active border border-border hover:border-border-active overflow-hidden">
+          <Image
+            src="/images/card.webp"
+            alt="card"
+            width={336}
+            height={222.75}
+            className="group-hover:scale-[107%] w-[24.75rem] aspect-video"
+          />
+        </div>
+
         <div className="flex flex-col gap-1 truncate">
-          <h4 className="truncate text-fg">{title}</h4>
-          <span className="truncate text-itemSubtitle text-fg-secondary">
-            {subtitle}
-          </span>
+          <h3 className="underline decoration-bg group-hover:decoration-fg-active line-clamp-1 text-fg-active text-subtitle">
+            {title}
+          </h3>
+          <p className="line-clamp-1 text-body ">{subtitle}</p>
         </div>
       </div>
     </Link>

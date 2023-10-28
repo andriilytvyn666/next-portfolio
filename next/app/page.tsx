@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import client from '../client'
 import ButtonLink from './components/ButtonLink'
+import Card from './components/Card'
 
 export default async function Home() {
   const data = await client.fetch<Homepage>(`*[_type == "homepage"][0]`, {
@@ -37,5 +38,33 @@ export default async function Home() {
     },
   }
 
-  return <>hello</>
+  return (
+    <div className="grid grid-cols-3 gap-y-8 gap-x-6 w-fit mx-auto items-center">
+      <Card
+        title="rihterb.pp.ua"
+        subtitle="website for ukrainian indie musician vasily richter"
+        url="https://rihterb.pp.ua"
+      />
+      <Card
+        title="rihterb.pp.ua"
+        subtitle="website for ukrainian indie musician vasily richter"
+        url="https://rihterb.pp.ua"
+      />
+      <Card
+        title="rihterb.pp.ua"
+        subtitle="website for ukrainian indie musician vasily richter"
+        url="https://rihterb.pp.ua"
+      />
+      <Card
+        title="rihterb.pp.ua"
+        subtitle="website for ukrainian indie musician vasily richter"
+        url="https://rihterb.pp.ua"
+      />
+      <Card
+        title="rihterb.pp.ua"
+        subtitle="website for ukrainian indie musician vasily richter"
+        url="https://rihterb.pp.ua"
+      />
+    </div>
+  )
 }
