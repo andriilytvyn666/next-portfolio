@@ -7,11 +7,9 @@ import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const links = [
-  { name: 'home', link: '/' },
-  // { name: 'skills', link: '/skills' },
   { name: 'projects', link: '/projects' },
-  // { name: 'courses', link: '/courses' },
-  { name: 'posts', link: '/posts' },
+  { name: 'pics', link: '/pics' },
+  { name: 'resume', link: '/resume' },
 ]
 
 type Props = {
@@ -40,7 +38,7 @@ export default function Header({ navNames }: Props) {
       </div>
 
       <nav className="flex items-center gap-3">
-        {links.map((link, index) => (
+        {links.map((link) => (
           <Link
             href={link.link}
             key={link.name}
@@ -48,8 +46,7 @@ export default function Header({ navNames }: Props) {
               link.link === pathname && 'text-fg-active'
             }`}
           >
-            {/* TODO: remove toLowerCase when content is updated */}
-            {navNames[index].toLowerCase()}
+            {link.name}
           </Link>
         ))}
       </nav>
