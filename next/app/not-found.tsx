@@ -1,7 +1,5 @@
 import Image from 'next/image'
 
-import ButtonLink from './components/ButtonLink'
-
 export default function NotFound() {
   return (
     <div className="flex flex-col gap-8 w-full h-full items-center justify-center">

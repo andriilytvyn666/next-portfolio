@@ -67,7 +67,6 @@ export default async function Courses() {
                   education.dateFinished
                 ).getFullYear()}`}
                 url={education.link}
-                imageUrl={builder.image(education.image).url()}
               />
             )
           })}
