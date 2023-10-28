@@ -6,8 +6,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-import styles from './Header.module.css'
-
 const links = [
   { name: 'home', link: '/' },
   // { name: 'skills', link: '/skills' },
@@ -25,7 +23,7 @@ export default function Header({ navNames }: Props) {
   const pathname = usePathname()
 
   return (
-    <header className="w-full max-w-[90rem] flex justify-between px-8 py-4">
+    <header className="w-full max-w-[90rem] flex justify-between py-4 px-8">
       <div className="flex gap-4 items-center">
         <NavLink href="/">
           <Image
