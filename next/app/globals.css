@@ -10,41 +10,21 @@
   }
 
   * {
+    font-family: 'Inter', sans-serif;
     @apply transition-all duration-300 ease-in-out;
     @apply selection:bg-[#282828];
     @apply text-fg;
-    font-family: 'Inter', sans-serif;
     @apply text-body;
-  }
-
-  html {
-    @apply invert dark:invert-0 transition-none;
-  }
-
-  img {
-    @apply invert dark:invert-0 transition-none transition-transform;
   }
 
   h1 {
     @apply text-title;
   }
 
-  h2 {
-    @apply text-subtitle;
-  }
-
-  h3 {
-    @apply text-subtitle;
-  }
-
-  h4 {
-    @apply text-subtitle;
-  }
-
-  h5 {
-    @apply text-subtitle;
-  }
-
+  h2,
+  h3,
+  h4,
+  h5,
   h6 {
     @apply text-subtitle;
   }
