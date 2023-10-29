@@ -9,13 +9,13 @@ type Props = {
   // imageUrl: string
 }
 
-export default function Card({ title, subtitle, url }: Props) {
+export default function Project({ title, subtitle, url }: Props) {
   return (
     <Link href={url} target="_blank" className="">
       <div className="flex flex-col gap-4 group">
-        <div className="w-[24.75rem] aspect-video bg-bg-active border border-border hover:border-border-active overflow-hidden">
+        <div className="w-[24.75rem] aspect-video bg-bg-active border border-border hover:border-border-active overflow-hidden box-content">
           <Image
-            src="/images/card.webp"
+            src="/images/project.webp"
             alt="card"
             width={336}
             height={222.75}
