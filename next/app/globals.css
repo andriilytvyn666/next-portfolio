@@ -12,41 +12,32 @@
   * {
     @apply transition-all duration-300 ease-in-out;
     @apply selection:bg-[#282828];
-    @apply text-fg-secondary;
+    @apply text-fg;
     font-family: 'Inter', sans-serif;
   }
 
   h1 {
-    @apply text-headerXl;
+    @apply text-title;
   }
 
   h2 {
-    @apply text-header;
+    @apply text-subtitle;
   }
 
   h3 {
-    @apply text-headerSm;
+    @apply text-subtitle;
   }
 
   h4 {
-    @apply text-itemTitle;
+    @apply text-subtitle;
   }
 
   h5 {
-    @apply text-itemSubtitle;
+    @apply text-subtitle;
   }
 
   h6 {
-    @apply text-itemNav;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-fg;
+    @apply text-subtitle;
   }
 }
 
