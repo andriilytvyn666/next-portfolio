@@ -13,7 +13,7 @@
     font-family: 'Inter', sans-serif;
     @apply transition-all duration-300 ease-in-out;
     @apply selection:bg-[#282828];
-    @apply text-fg;
+    @apply dark:text-fg-dark text-fg;
     @apply text-body;
   }
 
@@ -31,13 +31,15 @@
 }
 
 @layer components {
+  /* TODO: update link style 
   .link {
-    @apply text-fg border-b border-[#292929] hover:border-[#bbbbbb];
+    @apply text-fg dark:text-fg-dark border-b border-[#292929] hover:border-[#bbbbbb];
     @apply inline-flex items-center gap-1.5;
   }
+  */
 
   .text-clickable {
-    @apply underline decoration-bg hover:decoration-fg-active hover:text-fg-active;
+    @apply underline decoration-bg dark:decoration-bg-dark hover:decoration-fg-active dark:hover:decoration-fg-active-dark dark:hover:text-fg-active-dark hover:text-fg-active;
   }
 }
 

@@ -40,7 +40,7 @@ export default async function Home() {
 
   return (
     <div className="flex gap-12">
-      <div className="min-w-[40rem] h-[30rem] hover:border-border-active border border-border overflow-hidden box-content">
+      <div className="min-w-[40rem] h-[30rem] dark:hover:border-border-active-dark hover:border-border-active border border-border dark:border-border-dark overflow-hidden box-content">
         <Image
           src="/images/homepage1.webp"
           width={640}
@@ -49,8 +49,10 @@ export default async function Home() {
           className="hover:scale-[107%] h-full"
         />
       </div>
-      <div className="flex justify-center flex-col gap-4 pr-16">
-        <h1 className="text-title text-fg-active underline">hi there!</h1>
+      <div className="flex justify-center flex-col gap-4 pr-16 ">
+        <h1 className="text-title text-fg-active dark:text-fg-active-dark duration-100 underline">
+          hi there!
+        </h1>
         <p>
           i am 20 years old computer science student at lpnu (4th year)
           <br />

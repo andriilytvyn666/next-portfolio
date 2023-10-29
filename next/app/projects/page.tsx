@@ -21,7 +21,11 @@ export default function Projects() {
       <div className="flex gap-4 [&>*]:text-body [&>*]:text-clickable w-full items-center justify-center">
         <button
           type="button"
-          className={`${currentTab === 'projects' ? 'text-fg-active' : ''}`}
+          className={`${
+            currentTab === 'projects'
+              ? 'dark:text-fg-active-dark text-fg-active'
+              : ''
+          }`}
           onClick={() => {
             setCurrentTab('projects')
           }}
@@ -30,7 +34,11 @@ export default function Projects() {
         </button>
         <button
           type="button"
-          className={`${currentTab === 'figma' ? 'text-fg-active' : ''}`}
+          className={`${
+            currentTab === 'figma'
+              ? 'dark:text-fg-active-dark text-fg-active'
+              : ''
+          }`}
           onClick={() => {
             setCurrentTab('figma')
           }}
@@ -39,7 +47,11 @@ export default function Projects() {
         </button>
         <button
           type="button"
-          className={`${currentTab === 'html' ? 'text-fg-active' : ''}`}
+          className={`${
+            currentTab === 'html'
+              ? 'dark:text-fg-active-dark text-fg-active'
+              : ''
+          }`}
           onClick={() => {
             setCurrentTab('html')
           }}

@@ -6,7 +6,7 @@ export default function Debug() {
   }
 
   return (
-    <div className="fixed z-50 flex items-center justify-center w-10 h-10 bg-bg border-border border text-fg-active bottom-2 left-2">
+    <div className="fixed z-50 flex items-center justify-center w-10 h-10 dark:bg-bg-dark bg-bg dark:border-border-dark border-border border dark:text-fg-active-dark text-fg-active bottom-16 left-8">
       <span className="hidden xs:block sm:hidden">xs</span>
       <span className="hidden sm:block md:hidden">sm</span>
       <span className="hidden md:block lg:hidden">md</span>

@@ -1,30 +1,28 @@
-'use client'
-
 import { Metadata } from 'next'
 import Image from 'next/image'
 
+import Providers from './Providers'
 import Debug from './components/Debug'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import './globals.css'
-import ThemeProvider, { useTheme } from './theme/ThemeContext'
 
-// export const metadata: Metadata = {
-//   title: 'Andrii Lytvyn',
-//   description:
-//     'A web developer from Ukraine. Interested in UI/UX, React & Vue.',
-//   icons: {
-//     shortcut: '/favicon.ico',
-//     icon: '/favicon-32x32.png',
-//   },
-//   metadataBase: new URL('https://andriilytvyn.pp.ua'),
-//   openGraph: {
-//     title: 'Andrii Lytvyn',
-//     description:
-//       'A web developer from Ukraine. Interested in UI/UX, React & Vue.',
-//     url: 'https://andriilytvyn.pp.ua',
-//   },
-// }
+export const metadata: Metadata = {
+  title: 'Andrii Lytvyn',
+  description:
+    'A web developer from Ukraine. Interested in UI/UX, React & Vue.',
+  icons: {
+    shortcut: '/favicon.ico',
+    icon: '/favicon-32x32.png',
+  },
+  metadataBase: new URL('https://andriilytvyn.pp.ua'),
+  openGraph: {
+    title: 'Andrii Lytvyn',
+    description:
+      'A web developer from Ukraine. Interested in UI/UX, React & Vue.',
+    url: 'https://andriilytvyn.pp.ua',
+  },
+}
 
 type Props = {
   children: React.ReactNode
@@ -34,12 +32,10 @@ type Props = {
 }
 
 export default function RootLayout({ children, params }: Props) {
-  const theme = useTheme()
-
   return (
-    <ThemeProvider>
-      <html>
-        <body className="bg-bg">
+    <html>
+      <body className="bg-bg dark:bg-bg-dark">
+        <Providers>
           <Debug />
           <div className=" flex flex-col items-center flex-grow min-h-screen gap-12 max-w-[90rem] mx-auto px-8">
             <Header
@@ -51,8 +47,8 @@ export default function RootLayout({ children, params }: Props) {
             </article>
             <Footer />
           </div>
-        </body>
-      </html>
-    </ThemeProvider>
+        </Providers>
+      </body>
+    </html>
   )
 }
