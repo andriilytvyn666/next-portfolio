@@ -35,15 +35,15 @@ type Props = {
 export default function RootLayout({ children, params }: Props) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-bg`}>
         {/* <Debug /> */}
-        <div className="flex flex-col items-center flex-grow min-h-screen gap-4 pt-8 md:gap-12 md:pt-4 bg-bg">
+        <div className="flex flex-col items-center flex-grow min-h-screen gap-12 max-w-[90rem] mx-auto px-8">
           <Header
             locale={params.locale}
-            navNames={['Home', 'Projects', 'Posts']}
+            navNames={['home', 'projects', 'posts']}
           />
-          <article className="grid items-stretch justify-center w-full grid-cols-10 gap-5 px-4 grow mx-auto max-w-[90rem]">
-            <div className="flex flex-col col-span-10 gap-8">{children}</div>
+          <article className="grid items-stretch justify-center w-full grid-cols-12 gap-5  grow ">
+            <div className="flex flex-col col-span-12 gap-8">{children}</div>
           </article>
           <Footer />
         </div>
