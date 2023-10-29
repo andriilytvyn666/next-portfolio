@@ -4,7 +4,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import React, { useState } from 'react'
 
 import client from '../../client'
-import Card from '../components/Card'
+import Project from '../components/Project'
 
 export default function Projects() {
   // const data = await client.fetch<Projects>(`*[_type == "projects"][0]`, {
@@ -48,27 +48,27 @@ export default function Projects() {
         </button>
       </div>
       <div className="grid grid-cols-3 gap-y-8 gap-x-6 w-fit mx-auto items-center pt-8">
-        <Card
+        <Project
           title="rihterb.pp.ua"
           subtitle="website for ukrainian indie musician vasily richter"
           url="https://rihterb.pp.ua"
         />
-        <Card
+        <Project
           title="rihterb.pp.ua"
           subtitle="website for ukrainian indie musician vasily richter"
           url="https://rihterb.pp.ua"
         />
-        <Card
+        <Project
           title="rihterb.pp.ua"
           subtitle="website for ukrainian indie musician vasily richter"
           url="https://rihterb.pp.ua"
         />
-        <Card
+        <Project
           title="rihterb.pp.ua"
           subtitle="website for ukrainian indie musician vasily richter"
           url="https://rihterb.pp.ua"
         />
-        <Card
+        <Project
           title="rihterb.pp.ua"
           subtitle="website for ukrainian indie musician vasily richter"
           url="https://rihterb.pp.ua"
