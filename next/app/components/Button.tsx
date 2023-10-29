@@ -28,7 +28,7 @@ const Button: FC<Props> = ({ name, link, target }: Props) => {
 
   return (
     <Link href={link} target={target}>
-      <button className="group flex border-border border hover:border-border-active rounded-lg px-4 py-2.5 gap-3 bg-bg-active items-center box-content">
+      <button className="flex border-border border hover:border-border-active rounded-lg px-4 py-2.5 gap-3 bg-bg-active items-center box-content">
         <div className="[&>*]:transition-none [&>*]:w-5 [&>*]:h-5">
           {selectIcon(name)}
         </div>

@@ -17,6 +17,14 @@
     @apply text-body;
   }
 
+  html {
+    @apply invert dark:invert-0 transition-none;
+  }
+
+  img {
+    @apply invert dark:invert-0 transition-none transition-transform;
+  }
+
   h1 {
     @apply text-title;
   }

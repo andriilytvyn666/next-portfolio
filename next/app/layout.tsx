@@ -35,7 +35,7 @@ type Props = {
 export default function RootLayout({ children, params }: Props) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-bg`}>
+      <body className={`${inter.className} bg-bg `}>
         {/* <Debug /> */}
         <div className="flex flex-col items-center flex-grow min-h-screen gap-12 max-w-[90rem] mx-auto px-8">
           <Header
