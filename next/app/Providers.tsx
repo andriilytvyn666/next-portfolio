@@ -3,6 +3,8 @@
 import { ThemeProvider } from 'next-themes'
 import { FC, useEffect, useState } from 'react'
 
+import LocaleProvider from './providers/LocaleProvider'
+
 type Props = {
   children: React.ReactNode
 }
@@ -18,7 +20,11 @@ const Providers: FC<Props> = ({ children }: Props) => {
     return <>{children}</>
   }
 
-  return <ThemeProvider attribute="class">{children}</ThemeProvider>
+  return (
+    <ThemeProvider attribute="class">
+      <LocaleProvider>{children}</LocaleProvider>
+    </ThemeProvider>
+  )
 }
 
 export default Providers
