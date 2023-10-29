@@ -13,30 +13,32 @@ export default async function Projects() {
   const builder = imageUrlBuilder(client)
 
   return (
-    <>
-      <PageHead
-        title={data.title}
-        className="lg:col-span-2"
-        subtitle={data.subtitle}
+    <div className="grid grid-cols-3 gap-y-8 gap-x-6 w-fit mx-auto items-center">
+      <Card
+        title="rihterb.pp.ua"
+        subtitle="website for ukrainian indie musician vasily richter"
+        url="https://rihterb.pp.ua"
       />
-      <>
-        {data.projectGroups.map((projectGroup, index) => {
-          return (
-            <CardGroup key={index} title={projectGroup.name}>
-              {projectGroup.projects.map((project, index) => {
-                return (
-                  <Card
-                    key={index}
-                    url={project.link}
-                    title={project.title}
-                    subtitle={project.subtitle}
-                  />
-                )
-              })}
-            </CardGroup>
-          )
-        })}
-      </>
-    </>
+      <Card
+        title="rihterb.pp.ua"
+        subtitle="website for ukrainian indie musician vasily richter"
+        url="https://rihterb.pp.ua"
+      />
+      <Card
+        title="rihterb.pp.ua"
+        subtitle="website for ukrainian indie musician vasily richter"
+        url="https://rihterb.pp.ua"
+      />
+      <Card
+        title="rihterb.pp.ua"
+        subtitle="website for ukrainian indie musician vasily richter"
+        url="https://rihterb.pp.ua"
+      />
+      <Card
+        title="rihterb.pp.ua"
+        subtitle="website for ukrainian indie musician vasily richter"
+        url="https://rihterb.pp.ua"
+      />
+    </div>
   )
 }

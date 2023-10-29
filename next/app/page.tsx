@@ -38,33 +38,5 @@ export default async function Home() {
     },
   }
 
-  return (
-    <div className="grid grid-cols-3 gap-y-8 gap-x-6 w-fit mx-auto items-center">
-      <Card
-        title="rihterb.pp.ua"
-        subtitle="website for ukrainian indie musician vasily richter"
-        url="https://rihterb.pp.ua"
-      />
-      <Card
-        title="rihterb.pp.ua"
-        subtitle="website for ukrainian indie musician vasily richter"
-        url="https://rihterb.pp.ua"
-      />
-      <Card
-        title="rihterb.pp.ua"
-        subtitle="website for ukrainian indie musician vasily richter"
-        url="https://rihterb.pp.ua"
-      />
-      <Card
-        title="rihterb.pp.ua"
-        subtitle="website for ukrainian indie musician vasily richter"
-        url="https://rihterb.pp.ua"
-      />
-      <Card
-        title="rihterb.pp.ua"
-        subtitle="website for ukrainian indie musician vasily richter"
-        url="https://rihterb.pp.ua"
-      />
-    </div>
-  )
+  return <div>hello</div>
 }
