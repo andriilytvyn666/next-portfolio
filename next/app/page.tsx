@@ -2,8 +2,7 @@ import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Link from 'next/link'
 
 import client from '../client'
-import ButtonLink from './components/ButtonLink'
-import Card from './components/Card'
+import Button from './components/Button'
 
 export default async function Home() {
   const data = await client.fetch<Homepage>(`*[_type == "homepage"][0]`, {
@@ -38,5 +37,22 @@ export default async function Home() {
     },
   }
 
-  return <div>hello</div>
+  return (
+    <div>
+      <div className="flex gap-4">
+        <Button name="telegram" link="https://t.me/nneeeooo" target="_blank" />
+        <Button
+          name="github"
+          link="https://github.com/andriilytvyn666"
+          target="_blank"
+        />
+        <Button
+          name="instagram"
+          link="https://instagram.com/nneeeooo_pics"
+          target="_blank"
+        />
+        <Button name="email" link="mailto:lytvyn.andrii.contact@gmail.com" />
+      </div>
+    </div>
+  )
 }
