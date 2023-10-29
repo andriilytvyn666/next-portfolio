@@ -12,22 +12,9 @@ export default async function Skills() {
 
   return (
     <>
-      <PageHead
-        title={data.title}
-        className="lg:col-span-2"
-        subtitle={data.subtitle}
-      />
-      <>
-        {data.skillGroups.map((skillGroup, index) => {
-          return (
-            <SkillGroup key={index} title={skillGroup.name}>
-              {skillGroup.skills.map((skill, index) => {
-                return <Skill key={index} name={skill.name} />
-              })}
-            </SkillGroup>
-          )
-        })}
-      </>
+      sorry this page is deprecated
+      <br />
+      {"you'd bette go see resume page"}
     </>
   )
 }
