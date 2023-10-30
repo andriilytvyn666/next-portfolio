@@ -34,7 +34,7 @@ type Props = {
 export default function RootLayout({ children, params }: Props) {
   return (
     <html>
-      <body className="bg-bg dark:bg-bg-dark">
+      <body className="bg-bg">
         <Providers>
           <Debug />
           <div className=" flex flex-col items-center flex-grow min-h-screen gap-12 max-w-[90rem] mx-auto px-8">

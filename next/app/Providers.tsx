@@ -1,6 +1,5 @@
 'use client'
 
-import { ThemeProvider } from 'next-themes'
 import { FC, useEffect, useState } from 'react'
 
 import LocaleProvider from './providers/LocaleProvider'
@@ -20,11 +19,7 @@ const Providers: FC<Props> = ({ children }: Props) => {
     return <>{children}</>
   }
 
-  return (
-    <ThemeProvider attribute="class">
-      <LocaleProvider>{children}</LocaleProvider>
-    </ThemeProvider>
-  )
+  return <LocaleProvider>{children}</LocaleProvider>
 }
 
 export default Providers

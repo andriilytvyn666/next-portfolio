@@ -5,7 +5,6 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: "class",
   theme: {
     fontSize: {
       title: [
@@ -32,22 +31,16 @@ module.exports = {
     },
     colors: {
       bg: {
-        DEFAULT: '#f1f1f1',
-        active: '#dadada',
-        dark: '#0E0E0E',
-        'active-dark': '#252525'
+        DEFAULT: '#0E0E0E',
+        active: '#252525'
       },
       fg: {
-        DEFAULT: '#747474',
-        dark: '#8B8B8B',
-        active: '#070707',
-        'active-dark': '#F8F8F8'
+        DEFAULT: '#8B8B8B',
+        active: '#F8F8F8'
       },
       border: {
-        DEFAULT: '#b6b6b6',
-        dark: '#494949',
-        active: '#515151',
-        'active-dark': '#AEAEAE'
+        DEFAULT: '#494949',
+        active: '#AEAEAE'
       }
     },
     extend: {

@@ -43,8 +43,7 @@ export default function Header({ navNames }: Props) {
             href={link.link}
             key={link.name}
             className={`text-clickable select-none p-2 ${
-              link.link === pathname &&
-              'text-fg-active dark:text-fg-active-dark'
+              link.link === pathname && 'text-fg-active'
             }`}
           >
             {link.name}
