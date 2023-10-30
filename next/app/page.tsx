@@ -46,7 +46,7 @@ export default async function Home() {
           width={640}
           height={480}
           alt="Homepage picture"
-          className="hover:scale-[107%] h-full"
+          className="hover:scale-[107%] h-full select-none"
         />
       </div>
       <div className="flex justify-center flex-col gap-4 pr-16 ">

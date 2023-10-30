@@ -8,7 +8,7 @@ export default function PicsCard() {
         alt="pic"
         width={296}
         height={222}
-        className="hover:scale-[107%]"
+        className="hover:scale-[107%] select-none"
       />
     </div>
   )

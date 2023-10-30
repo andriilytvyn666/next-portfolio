@@ -22,7 +22,7 @@ export default function Header({ navNames }: Props) {
 
   return (
     <header className="w-full flex justify-between py-4">
-      <div id="logo" className="flex gap-4 items-center">
+      <div id="logo" className="flex gap-4 items-center select-none">
         <NavLink href="/">
           <Image
             src={`/images/logo.webp`}

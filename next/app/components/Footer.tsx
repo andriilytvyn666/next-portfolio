@@ -23,7 +23,7 @@ export default function Footer() {
     <footer className="flex w-full items-center justify-between pt-4 pb-5">
       <p>copyright © 2023 andrii lytvyn</p>
       <div className="flex gap-4">
-        <button onClick={toggleLocale}>
+        <button onClick={toggleLocale} className="select-none">
           {locale === 'en' ? 'українська' : 'english'}
         </button>
         <button
