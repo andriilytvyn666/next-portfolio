@@ -17,7 +17,8 @@ export default {
     },
     {
       name: 'link',
-      type: 'url',
+      type: 'string',
+      description: 'external link or internal (/projects)',
       validation: (rule: Rule) => rule.required(),
     },
     {

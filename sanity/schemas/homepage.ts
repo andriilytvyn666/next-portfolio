@@ -8,7 +8,7 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'name',
+      name: 'title',
       type: 'string',
       validation: (rule: Rule) => rule.required(),
     },
