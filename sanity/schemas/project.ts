@@ -24,7 +24,7 @@ export default {
     {
       name: 'image',
       type: 'image',
-      description: 'webp 128x128',
+      description: 'webp (16:9 aspect ratio)',
       options: {accept: 'image/webp'},
       validation: (rule: Rule) => rule.required(),
     },

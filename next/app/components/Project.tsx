@@ -6,19 +6,19 @@ type Props = {
   title: string
   subtitle: string
   url: string
-  // imageUrl: string
+  imageUrl: string
 }
 
-export default function Project({ title, subtitle, url }: Props) {
+export default function Project({ title, subtitle, url, imageUrl }: Props) {
   return (
     <Link href={url} target="_blank" className="">
       <div className="flex flex-col gap-4 group">
         <div className="w-[24.75rem] aspect-video bg-bg-active border border-border hover:border-border-active overflow-hidden box-content">
           <Image
-            src="/images/project.webp"
+            src={imageUrl}
             alt="card"
-            width={336}
-            height={222.75}
+            width={396 * 2}
+            height={222.75 * 2}
             className="group-hover:scale-[107%] w-[24.75rem] aspect-video select-none"
           />
         </div>
