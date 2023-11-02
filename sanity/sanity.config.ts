@@ -20,7 +20,7 @@ export default defineConfig({
               .title('Homepage')
               .child(S.document().schemaType('homepage').documentId('homepage')),
             ...S.documentTypeListItems().filter(
-              (listItem) => !['project', 'homepage', 'link'].includes(`${listItem.getId()}`)
+              (listItem) => !['project', 'homepage', 'link', 'pic'].includes(`${listItem.getId()}`)
             ),
           ]),
     }),

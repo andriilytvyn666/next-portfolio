@@ -1,32 +1,39 @@
-import PicsCard from '../components/PicsCard'
+import imageUrlBuilder from '@sanity/image-url'
+
+import client from '../../client'
+import PicCard from '../components/PicCard'
 import PicsSection from '../components/PicsSection'
 
-export default function Pics() {
+export default async function Pics() {
+  const data = await client.fetch<PixGroup[]>(
+    '*[_type == "pixGroup"] { title, date, pix }'
+  )
+
+  const builder = imageUrlBuilder(client)
+
   return (
     <>
-      <PicsSection date={new Date('10-01-2023')}>
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-      </PicsSection>
-      <PicsSection date={new Date('9-01-2023')}>
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-      </PicsSection>
-      <PicsSection date={new Date('8-01-2023')}>
-        <PicsCard />
-        <PicsCard />
-        <PicsCard />
-      </PicsSection>
+      {data
+        .sort((a, b) => {
+          const dateA = new Date(a.date)
+          const dateB = new Date(b.date)
+
+          return dateA < dateB ? 1 : dateA > dateB ? -1 : 0
+        })
+        .map((pixGroup) => {
+          return (
+            <PicsSection key={pixGroup.title} date={new Date(pixGroup.date)}>
+              {pixGroup.pix.map((pic) => {
+                return (
+                  <PicCard
+                    key={pic.title}
+                    imageUrl={builder.image(pic.image).url()}
+                  />
+                )
+              })}
+            </PicsSection>
+          )
+        })}
     </>
   )
 }

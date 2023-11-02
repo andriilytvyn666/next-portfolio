@@ -1,3 +1,14 @@
+type Pic = {
+  title: string
+  image: image
+}
+
+type PixGroup = {
+  title: string
+  date: Date
+  pix: Pic[]
+}
+
 type Project = {
   title: string
   subtitle: string
