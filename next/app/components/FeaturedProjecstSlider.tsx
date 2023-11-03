@@ -30,24 +30,14 @@ const FeaturedProjectsSlider: FC<Props> = ({ projects }) => {
     >
       {projects.map((project) => {
         return (
-          <>
-            <SwiperSlide key={project.title}>
-              <Project
-                title={project.title}
-                subtitle={project.subtitle}
-                url={project.link}
-                imageUrl={builder.image(project.image).url()}
-              />
-            </SwiperSlide>
-            <SwiperSlide key={project.title}>
-              <Project
-                title={project.title}
-                subtitle={project.subtitle}
-                url={project.link}
-                imageUrl={builder.image(project.image).url()}
-              />
-            </SwiperSlide>
-          </>
+          <SwiperSlide key={project.title}>
+            <Project
+              title={project.title}
+              subtitle={project.subtitle}
+              url={project.link}
+              imageUrl={builder.image(project.image).url()}
+            />
+          </SwiperSlide>
         )
       })}
     </Swiper>
