@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 import client from '../client'
 import Button from './components/Button'
-import HomepageSlider from './components/HomapageSlider'
 import FeaturedProjectsSlider from './components/FeaturedProjecstSlider'
+import HomepageSlider from './components/HomapageSlider'
 
 export default async function Home() {
   const data = await client.fetch<Homepage>(
@@ -13,7 +13,7 @@ export default async function Home() {
       next: { cache: 'force-cache' },
     }
   )
-  
+
   const portableTextComponents: PortableTextComponents = {
     marks: {
       link: ({ value, children }) => {
@@ -75,9 +75,16 @@ export default async function Home() {
         </div>
       </div>
       <div className="flex gap-4">
-        <FeaturedProjectsSlider projects={data.featuredProjects}/>
-        <Link href="/projects" className="w-full max-w-[8.75rem] flex items-center justify-center h-[13.922rem] border hover:bg-bg-active hover:border-border-active border-border">
-          <span className="text-fg-active">more -><br/>projects</span>
+        <FeaturedProjectsSlider projects={data.featuredProjects} />
+        <Link
+          href="/projects"
+          className="w-full max-w-[8.75rem] flex items-center justify-center h-[13.922rem] border hover:bg-bg-active hover:border-border-active border-border"
+        >
+          <span className="text-fg-active">
+            {'more ->'}
+            <br />
+            projects
+          </span>
         </Link>
       </div>
     </div>
