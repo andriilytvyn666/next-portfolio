@@ -8,10 +8,7 @@ import HomepageSlider from './components/HomapageSlider'
 
 export default async function Home() {
   const data = await client.fetch<Homepage>(
-    `*[_type == "homepage"][0] { title, pix, text, links, featuredProjects }`,
-    {
-      next: { cache: 'force-cache' },
-    }
+    `*[_type == "homepage"][0] { title, pix, text, links, featuredProjects }`
   )
 
   const portableTextComponents: PortableTextComponents = {
@@ -45,8 +42,8 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-12">
       <div className="flex gap-12">
-        <HomepageSlider pix={data.pix} className="max-w-[40rem]" />
-        <div className="flex flex-col justify-center gap-4 pr-16 ">
+        <HomepageSlider pix={data.pix} className="max-w-[30rem]" />
+        <div className="flex flex-col justify-center w-full gap-4 pr-16">
           <h1 className="underline duration-100 text-title text-fg-active">
             {data.title}
           </h1>

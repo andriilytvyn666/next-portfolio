@@ -24,7 +24,6 @@ const HomepageSlider: FC<Props> = ({ pix, className }) => {
         pauseOnMouseEnter: true,
         delay: 3000,
       }}
-      allowTouchMove={false}
       loop
       spaceBetween={16}
       slidesPerView={1}
@@ -36,8 +35,8 @@ const HomepageSlider: FC<Props> = ({ pix, className }) => {
             <div className="box-content overflow-hidden border hover:border-border-active border-border">
               <Image
                 src={builder.image(pic).url()}
-                width={640}
-                height={480}
+                width={480}
+                height={360}
                 alt="Homepage picture"
                 className="hover:scale-[107%] h-full select-none"
               />
