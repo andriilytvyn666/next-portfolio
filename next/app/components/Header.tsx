@@ -21,8 +21,8 @@ export default function Header({ navNames }: Props) {
   const pathname = usePathname()
 
   return (
-    <header className="w-full flex justify-between py-4">
-      <div id="logo" className="flex gap-4 items-center select-none">
+    <header className="flex justify-between w-full lg:py-4">
+      <div id="logo" className="flex items-center gap-4 select-none">
         <NavLink href="/">
           <Image
             src={`/images/logo.webp`}
@@ -30,10 +30,13 @@ export default function Header({ navNames }: Props) {
             width={32}
             height={32}
             unoptimized
+            className="w-7 h-7 lg:w-8 lg:h-8"
           />
         </NavLink>
         <NavLink href="/">
-          <h1 className="text-clickable text-body">andrii lytvyn</h1>
+          <h1 className="hidden lg:inline text-clickable text-body whitespace-nowrap">
+            andrii lytvyn
+          </h1>
         </NavLink>
       </div>
 
