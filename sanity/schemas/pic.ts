@@ -13,7 +13,7 @@ export default {
     {
       name: 'image',
       type: 'image',
-      description: 'webp (4:3 aspect ratio)',
+      description: 'jpeg (4:3 aspect ratio)',
       options: {accept: 'image/jpeg'},
       validation: (rule: Rule) => rule.required(),
     },

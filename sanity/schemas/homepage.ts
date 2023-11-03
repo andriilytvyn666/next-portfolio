@@ -28,5 +28,11 @@ export default {
       type: 'array',
       of: [{type: 'link'}],
     },
+    {
+      name: 'featuredProjects',
+      type: 'array',
+      of: [{type: 'project'}],
+      validation: (rule: Rule) => rule.required().min(3),
+    },
   ],
 }

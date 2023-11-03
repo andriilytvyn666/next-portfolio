@@ -21,6 +21,7 @@ type Homepage = {
   pix: image[]
   text: any // TODO: Figure out type here
   links: link[]
+  featuredProjects: Project[]
 }
 
 type file = {

@@ -22,7 +22,7 @@ const HomepageSlider: FC<Props> = ({ pix, className }) => {
       autoplay={{
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
-        delay: 2000,
+        delay: 3000,
       }}
       allowTouchMove={false}
       loop

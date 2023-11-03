@@ -23,7 +23,7 @@ export default async function Pics() {
         .map((pixGroup) => {
           return (
             <PicsSection key={pixGroup.title} date={new Date(pixGroup.date)}>
-              {pixGroup.pix.map((pic) => {
+              {pixGroup.pix.reverse().map((pic) => {
                 return (
                   <PicCard
                     key={pic.asset._ref}
