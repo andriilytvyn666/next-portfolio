@@ -26,8 +26,8 @@ export default async function Pics() {
               {pixGroup.pix.map((pic) => {
                 return (
                   <PicCard
-                    key={pic.title}
-                    imageUrl={builder.image(pic.image).url()}
+                    key={pic.asset._ref}
+                    imageUrl={builder.image(pic).url()}
                   />
                 )
               })}

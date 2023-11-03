@@ -1,12 +1,7 @@
-type Pic = {
-  title: string
-  image: image
-}
-
 type PixGroup = {
   title: string
   date: Date
-  pix: Pic[]
+  pix: image[]
 }
 
 type Project = {
@@ -22,7 +17,8 @@ type ProjectGroup = {
 }
 
 type Homepage = {
-  name: string
+  title: string
+  pix: image[]
   text: any // TODO: Figure out type here
   links: link[]
 }

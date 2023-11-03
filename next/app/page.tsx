@@ -1,14 +1,17 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import client from '../client'
 import Button from './components/Button'
+import HomepageSlider from './components/HomapageSlider'
 
 export default async function Home() {
-  const data = await client.fetch<Homepage>(`*[_type == "homepage"][0]`, {
-    next: { cache: 'force-cache' },
-  })
+  const data = await client.fetch<Homepage>(
+    `*[_type == "homepage"][0] { title, pix, text, links }`,
+    {
+      next: { cache: 'force-cache' },
+    }
+  )
 
   const portableTextComponents: PortableTextComponents = {
     marks: {
@@ -40,40 +43,13 @@ export default async function Home() {
 
   return (
     <div className="flex gap-12">
-      <div className="min-w-[40rem] h-[30rem]  hover:border-border-active border border-border overflow-hidden box-content">
-        <Image
-          src="/images/homepage1.webp"
-          width={640}
-          height={480}
-          alt="Homepage picture"
-          className="hover:scale-[107%] h-full select-none"
-        />
-      </div>
-      <div className="flex justify-center flex-col gap-4 pr-16 ">
-        <h1 className="text-title text-fg-active  duration-100 underline">
-          hi there!
+      <HomepageSlider pix={data.pix} className="max-w-[40rem]" />
+      <div className="flex flex-col justify-center gap-4 pr-16 ">
+        <h1 className="underline duration-100 text-title text-fg-active">
+          {data.title}
         </h1>
-        <p>
-          i am 20 years old computer science student at lpnu (4th year)
-          <br />
-          i like to make things in figma and then to turn them into vue/react
-          websites
-          <br />
-          <br />
-          and i also do like to take pictures with my olympus camera or play
-          some guitar whenever i feel bored or something
-          <br />
-          <br />
-          hope you like my website
-          <br />
-          <br />
-          have a nice day
-          <br />
-          <br />
-          \(^ヮ^)/
-        </p>
-
-        <div className="flex gap-4 flex-wrap pt-4">
+        <PortableText value={data.text} components={portableTextComponents} />
+        <div className="flex flex-wrap gap-4 pt-4">
           <Button
             name="telegram"
             link="https://t.me/nneeeooo"

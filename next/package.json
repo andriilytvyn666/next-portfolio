@@ -15,7 +15,7 @@
     "@sanity/image-url": "^1.0.2",
     "@types/mdx": "^2.0.9",
     "@types/node": "18.15.3",
-    "@types/react": "^18.2.33",
+    "@types/react": "^18.2.34",
     "@types/react-dom": "^18.2.14",
     "date-fns": "^2.30.0",
     "eslint": "^8.52.0",
@@ -25,6 +25,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
+    "swiper": "^11.0.3",
     "typescript": "^5.2.2"
   },
   "devDependencies": {

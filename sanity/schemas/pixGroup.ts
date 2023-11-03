@@ -18,7 +18,8 @@ export default {
     {
       name: 'pix',
       type: 'array',
-      of: [{type: 'pic'}],
+      description: 'webp (4:3 aspect ratio)',
+      of: [{type: 'image'}],
       validation: (rule: Rule) => rule.required().min(1),
     },
   ],

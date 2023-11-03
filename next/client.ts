@@ -6,6 +6,6 @@ export const dataset = 'production'
 export default createClient({
   projectId: projectId,
   dataset: dataset,
-  useCdn: false,
-  apiVersion: '2023-11-02',
+  useCdn: true,
+  apiVersion: '2023-11-03',
 })
