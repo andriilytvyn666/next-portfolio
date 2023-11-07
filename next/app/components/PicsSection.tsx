@@ -7,8 +7,8 @@ type Props = {
 
 export default function PicsSection({ date, children }: Props) {
   return (
-    <div className="grid grid-cols-4 mx-auto w-fit gap-x-6 gap-y-8">
-      <h2 className="col-span-4 select-none text-subtitle text-fg-active">
+    <div className="grid w-full grid-cols-1 lg:grid-cols-4 lg:w-fit lg:mx-auto gap-x-6 gap-y-8">
+      <h2 className="select-none lg:col-span-4 text-subtitle text-fg-active">
         {date
           .toLocaleDateString('en-us', {
             month: 'long',

@@ -27,7 +27,7 @@ const FeaturedProjectsSlider: FC<Props> = ({ projects }) => {
         }}
         loop
         slidesPerView={1}
-        spaceBetween={16}
+        spaceBetween={24}
         breakpoints={{
           640: {
             slidesPerView: 3,

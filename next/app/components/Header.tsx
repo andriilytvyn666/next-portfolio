@@ -5,10 +5,11 @@ import NavLink from 'next/link'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
+import { FiBox, FiInstagram, FiUser } from 'react-icons/fi'
 
 const links = [
   { name: 'projects', link: '/projects' },
-  { name: 'pics', link: '/pics' },
+  { name: 'pix', link: '/pix' },
   { name: 'resume', link: '/resume' },
 ]
 
@@ -39,18 +40,40 @@ export default function Header({ navNames }: Props) {
           </h1>
         </NavLink>
       </div>
-
       <nav className="flex items-center gap-3">
         {links.map((link) => (
-          <Link
-            href={link.link}
+          <div
+            className="flex items-center gap-2 group text-clickable "
             key={link.name}
-            className={`text-clickable select-none p-2 ${
-              link.link === pathname && 'text-fg-active'
-            }`}
           >
-            {link.name}
-          </Link>
+            <Link
+              href={link.link}
+              className={`select-none flex gap-2 p-2 [&>*]:transition-none transition-none ${
+                link.link === pathname && 'text-fg-active'
+              }`}
+            >
+              <FiBox
+                width={20}
+                height={20}
+                className={`group-hover:stroke-fg-active w-5 h-5 ${
+                  link.link === pathname && 'stroke-fg-active'
+                } ${link.name === 'projects' ? 'block' : 'hidden'}`}
+              />
+              <FiUser
+                width={20}
+                height={20}
+                className={`group-hover:stroke-fg-active w-5 h-5 ${
+                  link.link === pathname && 'stroke-fg-active'
+                } ${link.name === 'resume' ? 'block' : 'hidden'}`}
+              />
+              <FiInstagram
+                className={`group-hover:stroke-fg-active w-5 h-5 ${
+                  link.link === pathname && 'stroke-fg-active'
+                } ${link.name === 'pix' ? 'block' : 'hidden'}`}
+              />
+              {link.name}
+            </Link>
+          </div>
         ))}
       </nav>
     </header>
