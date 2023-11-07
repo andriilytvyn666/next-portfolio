@@ -13,9 +13,9 @@ export default async function Projects() {
   )
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-8">
       <Tabs />
-      <div className="grid pt-8 mx-auto lg:grid-cols-3 items-centerlg gap-y-8 gap-x-6 w-fit">
+      <div className="grid mx-auto lg:grid-cols-3 items-centerlg gap-y-8 gap-x-6 w-fit">
         <ProjectsGrid projectGroups={data} />
       </div>
     </div>
