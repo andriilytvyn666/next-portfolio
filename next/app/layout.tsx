@@ -42,7 +42,7 @@ export default function RootLayout({ children, params }: Props) {
               locale={params.locale}
               navNames={['home', 'projects', 'posts']}
             />
-            <article className="grid items-stretch justify-center w-full grid-cols-12 gap-5 grow ">
+            <article className="grid items-stretch justify-center w-full grid-cols-12 gap-5 lg:gap-12 grow ">
               <div className="flex flex-col col-span-12 gap-8">{children}</div>
             </article>
             <Footer />

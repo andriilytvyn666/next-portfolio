@@ -17,7 +17,7 @@ const FeaturedProjectsSlider: FC<Props> = ({ projects }) => {
   const builder = imageUrlBuilder(client)
 
   return (
-    <div className="max-w-[73.078rem]">
+    <div className="max-w-[75.75rem]">
       <Swiper
         modules={[Autoplay]}
         autoplay={{

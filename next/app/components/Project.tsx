@@ -17,9 +17,9 @@ export default function Project({ title, subtitle, url, imageUrl }: Props) {
           <Image
             src={imageUrl}
             alt="card"
-            width={396 * 2}
-            height={222.75 * 2}
-            className="group-hover:scale-[107%] w-[24.75rem] aspect-video select-none"
+            width={388 * 2}
+            height={218.25 * 2}
+            className="group-hover:scale-[107%] w-[24.25rem] aspect-video select-none"
           />
         </div>
 

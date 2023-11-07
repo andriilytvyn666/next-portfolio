@@ -83,7 +83,7 @@ export default async function Home() {
         <FeaturedProjectsSlider projects={data.featuredProjects} />
         <Link
           href="/projects"
-          className="w-full lg:max-w-[8.75rem] lg:min-w-[8.75rem] flex items-center py-6 lg:py-0 justify-center lg:h-[13.066rem] border hover:bg-bg-active hover:border-border-active border-border"
+          className="w-full lg:max-w-[8.75rem] lg:min-w-[8.75rem] flex items-center py-6 lg:py-0 justify-center lg:h-[13.641rem] border hover:bg-bg-active hover:border-border-active border-border"
         >
           <span className="hidden lg:inline text-fg-active">
             {'more ->'}
