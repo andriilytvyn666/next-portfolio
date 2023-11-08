@@ -3,9 +3,9 @@
 import imageUrlBuilder from '@sanity/image-url'
 import { FC } from 'react'
 
-import client from '../../client'
-import Project from '../components/Project'
+import client from '../../../client'
 import { useTabs } from '../providers/TabsProvider'
+import Project from './Project'
 
 type Props = {
   projectGroups: ProjectGroup[]

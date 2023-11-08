@@ -1,0 +1,16 @@
+{
+  "header": {
+    "name": "andrii lytvyn",
+    "nav": {
+      "projects": "projects",
+      "pix": "pix",
+      "resume": "resume"
+    }
+  },
+  "footer": {
+    "copyright": "andrii lytvyn"
+  },
+  "featured": {
+    "more": "more projects ->"
+  }
+}

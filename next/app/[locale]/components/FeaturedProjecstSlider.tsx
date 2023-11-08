@@ -6,7 +6,7 @@ import 'swiper/css'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import client from '../../client'
+import client from '../../../client'
 import Project from './Project'
 
 type Props = {

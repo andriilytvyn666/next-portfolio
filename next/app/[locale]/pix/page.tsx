@@ -1,6 +1,6 @@
 import imageUrlBuilder from '@sanity/image-url'
 
-import client from '../../client'
+import client from '../../../client'
 import PicCard from '../components/PicCard'
 import PicsSection from '../components/PicsSection'
 

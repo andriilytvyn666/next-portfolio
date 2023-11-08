@@ -1,10 +1,11 @@
 import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Link from 'next/link'
 
-import client from '../client'
+import client from '../../client'
 import Button from './components/Button'
 import FeaturedProjectsSlider from './components/FeaturedProjecstSlider'
 import HomepageSlider from './components/HomapageSlider'
+import MoreProjects from './components/MoreProjects'
 
 export default async function Home() {
   const data = await client.fetch<Homepage>(
@@ -96,22 +97,7 @@ export default async function Home() {
       </div>
       <div className="relative flex flex-col w-full gap-6 lg:gap-6">
         <FeaturedProjectsSlider projects={data.featuredProjects} />
-        <Link
-          href="/projects"
-          className="lg:flex-col lg:absolute lg:right-0 lg:top-0 lg:max-w-[8.75rem] lg:min-w-[8.75rem] flex lg:h-full "
-        >
-          <div className="flex items-center justify-center w-full h-full py-6 border lg:py-0 hover:bg-bg-active hover:border-border-active border-border">
-            <span className="hidden lg:inline text-fg-active">
-              {'more ->'}
-              <br />
-              projects
-            </span>
-            <span className="lg:hidden text-fg-active ">
-              {'more  projects ->'}
-            </span>
-          </div>
-          <div className="hidden w-full h-20 lg:flex"></div>
-        </Link>
+        <MoreProjects />
       </div>
     </div>
   )

@@ -7,7 +7,7 @@ import 'swiper/css'
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import client from '../../client'
+import client from '../../../client'
 
 type Props = {
   pix: image[]

@@ -2,7 +2,6 @@
 
 import { FC, useEffect, useState } from 'react'
 
-import LocaleProvider from './providers/LocaleProvider'
 import TabsProvider from './providers/TabsProvider'
 
 type Props = {
@@ -20,11 +19,7 @@ const Providers: FC<Props> = ({ children }: Props) => {
     return <>{children}</>
   }
 
-  return (
-    <LocaleProvider>
-      <TabsProvider>{children}</TabsProvider>
-    </LocaleProvider>
-  )
+  return <TabsProvider>{children}</TabsProvider>
 }
 
 export default Providers

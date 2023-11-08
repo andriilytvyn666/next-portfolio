@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import client from '../../client'
+import client from '../../../client'
 import ProjectsGrid from '../components/ProjectsGrid'
 import Tabs from './tabs'
 

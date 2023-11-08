@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import NavLink from 'next/link'
 import Link from 'next/link'
@@ -20,6 +21,7 @@ type Props = {
 
 export default function Header({ navNames }: Props) {
   const pathname = usePathname()
+  const t = useTranslations('header')
 
   return (
     <header className="sticky top-0 z-50 flex justify-between w-full py-4 lg:py-4 bg-bg">
@@ -36,7 +38,7 @@ export default function Header({ navNames }: Props) {
         </NavLink>
         <NavLink href="/">
           <h1 className="hidden lg:inline text-clickable text-body whitespace-nowrap">
-            andrii lytvyn
+            {t('name')}
           </h1>
         </NavLink>
       </div>
@@ -72,7 +74,7 @@ export default function Header({ navNames }: Props) {
                   link.link === pathname && 'stroke-fg-active'
                 } ${link.name === 'pix' ? 'xs:block hidden' : 'hidden'}`}
               />
-              {link.name}
+              {t(`nav.${link.name}`)}
             </Link>
           </div>
         ))}
