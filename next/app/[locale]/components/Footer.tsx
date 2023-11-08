@@ -28,10 +28,14 @@ export default function Footer() {
       <div className="flex gap-4">
         <Link
           href={pathname}
-          locale={locale !== 'uk' ? 'uk' : 'en'}
+          locale={locale === 'ru' ? 'en' : locale !== 'uk' ? 'uk' : 'en'}
           className="select-none"
         >
-          {locale !== 'uk' ? 'українська' : 'english'}
+          {locale === 'ru'
+            ? 'english'
+            : locale !== 'uk'
+            ? 'українська'
+            : 'english'}
         </Link>
       </div>
     </footer>

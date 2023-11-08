@@ -1,3 +1,4 @@
+import { useLocale } from 'next-intl'
 import React from 'react'
 
 type Props = {
@@ -6,11 +7,13 @@ type Props = {
 }
 
 export default function PicsSection({ date, children }: Props) {
+  const locale = useLocale()
+
   return (
     <div className="flex flex-col gap-5 w-fit">
       <h2 className="select-none lg:col-span-5 text-subtitle text-fg-active">
         {date
-          .toLocaleDateString('en-us', {
+          .toLocaleDateString(locale === 'ru' ? 'uk' : locale, {
             month: 'long',
             year: 'numeric',
           })
