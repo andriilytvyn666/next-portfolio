@@ -31,7 +31,7 @@ const Button: FC<Props> = ({ name, link, target, className }: Props) => {
     <Link
       href={link}
       target={target}
-      className="w-full lg:w-fit group flex border-border border hover:border-border-active rounded-lg px-4 py-2.5 gap-3 bg-bg-active items-center box-content"
+      className={`${className} w-full lg:w-fit group flex border-border border hover:border-border-active rounded-lg px-4 py-2.5 gap-3 bg-bg-active items-center box-border`}
     >
       <div className="[&>*]:transition-none [&>*]:w-4 [&>*]:h-4">
         {selectIcon(name)}

@@ -52,8 +52,8 @@ export default async function Home() {
           </h1>
           <PortableText value={data.text} components={portableTextComponents} />
           {/* TODO: fix weird grid behaviour */}
-          <div className="flex flex-wrap gap-4 pt-4">
-            <div className="flex w-full gap-4 lg:w-fit lg:flex-wrap">
+          <div className="flex flex-col gap-4 pt-4 md:flex-row">
+            <div className="flex gap-4 md:hidden">
               <Button
                 name="telegram"
                 link="https://t.me/nneeeooo"
@@ -64,6 +64,17 @@ export default async function Home() {
                 link="mailto:lytvyn.andrii.contact@gmail.com"
               />
             </div>
+            <Button
+              name="telegram"
+              link="https://t.me/nneeeooo"
+              target="_blank"
+              className="hidden md:flex"
+            />
+            <Button
+              name="email"
+              link="mailto:lytvyn.andrii.contact@gmail.com"
+              className="hidden md:flex"
+            />
             <Button
               name="github"
               link="https://github.com/andriilytvyn666"

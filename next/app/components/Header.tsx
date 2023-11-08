@@ -31,7 +31,7 @@ export default function Header({ navNames }: Props) {
             width={32}
             height={32}
             unoptimized
-            className="w-7 h-7 lg:w-8 lg:h-8"
+            className="min-w-[1.75rem] min-h-[1.75rem] lg:w-8 lg:h-8"
           />
         </NavLink>
         <NavLink href="/">
