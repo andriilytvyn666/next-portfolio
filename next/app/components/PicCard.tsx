@@ -11,8 +11,8 @@ const PicCard: FC<Props> = ({ imageUrl }) => {
       <Image
         src={imageUrl}
         alt="pic"
-        width={296}
-        height={222}
+        width={256 * 2}
+        height={192 * 2}
         className="hover:scale-[107%] select-none w-full"
       />
     </div>

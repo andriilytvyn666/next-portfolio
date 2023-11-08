@@ -33,7 +33,7 @@ const Button: FC<Props> = ({ name, link, target, className }: Props) => {
       target={target}
       className="w-full lg:w-fit group flex border-border border hover:border-border-active rounded-lg px-4 py-2.5 gap-3 bg-bg-active items-center box-content"
     >
-      <div className="[&>*]:transition-none [&>*]:w-5 [&>*]:h-5">
+      <div className="[&>*]:transition-none [&>*]:w-4 [&>*]:h-4">
         {selectIcon(name)}
       </div>
       <span className="group-hover:text-fg-active dark:group-hover:text-fg-active-dark">

@@ -13,7 +13,6 @@ export default async function Pics() {
 
   return (
     <>
-      {' '}
       {data
         .sort((a, b) => {
           const dateA = new Date(a.date)
