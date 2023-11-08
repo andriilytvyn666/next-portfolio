@@ -51,7 +51,7 @@ export default function Header({ navNames }: Props) {
             <Link
               href={link.link}
               target={link.newPage ? '_blank' : '_self'}
-              className={`select-none flex gap-2 p-2 [&>*]:transition-none transition-none ${
+              className={`select-none flex gap-2 py-2 px-1 sm:p-2 [&>*]:transition-none transition-none ${
                 link.link === pathname && 'text-fg-active'
               }`}
             >
