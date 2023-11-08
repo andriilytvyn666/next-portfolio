@@ -37,12 +37,12 @@ export default function RootLayout({ children, params }: Props) {
       <body className="bg-bg">
         <Providers>
           <Debug />
-          <div className="flex flex-col items-center flex-grow min-h-screen gap-6 lg:gap-5 max-w-[90rem] mx-auto px-4 py-4 lg:py-0 lg:px-8">
+          <div className="max-w-[90rem] min-h-screen mx-auto flex flex-col flex-grow px-8 gap-5">
             <Header
               locale={params.locale}
               navNames={['home', 'projects', 'posts']}
             />
-            <article className="grid items-stretch justify-center w-full grid-cols-12 gap-5 lg:gap-12 grow ">
+            <article className="grid grid-cols-12 gap-5 grow">
               <div className="flex flex-col col-span-12 gap-12">{children}</div>
             </article>
             <Footer />

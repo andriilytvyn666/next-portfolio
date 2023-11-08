@@ -15,9 +15,9 @@ const Button: FC<Props> = ({ name, link, target, className }: Props) => {
   const selectIcon = (name: string): ReactNode => {
     switch (name) {
       case 'github':
-        return <SiGithub className=" group-hover:fill-fg-active" />
+        return <SiGithub className="group-hover:fill-fg-active" />
       case 'instagram':
-        return <SiInstagram className=" group-hover:fill-fg-active" />
+        return <SiInstagram className="group-hover:fill-fg-active" />
       case 'email':
         return <FiMail className="group-hover:stroke-fg-active" />
       case 'telegram':
