@@ -45,7 +45,7 @@ export default async function Home() {
         <h1 className="underline duration-100 lg:hidden text-title text-fg-active">
           {data.title}
         </h1>
-        <HomepageSlider pix={data.pix} className="w-full max-w-[30rem]" />
+        <HomepageSlider pix={data.pix} className="w-full lg:max-w-[30rem]" />
         <div className="flex flex-col justify-center w-full gap-4 lg:pr-16">
           <h1 className="hidden underline duration-100 lg:inline text-title text-fg-active">
             {data.title}
@@ -79,20 +79,23 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-6 lg:gap-6 lg:flex-row">
+      <div className="relative flex flex-col w-full gap-6 lg:gap-6">
         <FeaturedProjectsSlider projects={data.featuredProjects} />
         <Link
           href="/projects"
-          className="w-full lg:max-w-[8.75rem] lg:min-w-[8.75rem] flex items-center py-6 lg:py-0 justify-center lg:h-[13.641rem] border hover:bg-bg-active hover:border-border-active border-border"
+          className="lg:flex-col lg:absolute lg:right-0 lg:top-0 lg:max-w-[8.75rem] lg:min-w-[8.75rem] flex lg:h-full "
         >
-          <span className="hidden lg:inline text-fg-active">
-            {'more ->'}
-            <br />
-            projects
-          </span>
-          <span className="lg:hidden text-fg-active">
-            {'more  projects ->'}
-          </span>
+          <div className="flex items-center justify-center w-full h-full py-6 border lg:py-0 hover:bg-bg-active hover:border-border-active border-border">
+            <span className="hidden lg:inline text-fg-active">
+              {'more ->'}
+              <br />
+              projects
+            </span>
+            <span className="lg:hidden text-fg-active ">
+              {'more  projects ->'}
+            </span>
+          </div>
+          <div className="hidden w-full h-20 lg:flex"></div>
         </Link>
       </div>
     </div>

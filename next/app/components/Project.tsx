@@ -11,7 +11,7 @@ type Props = {
 
 export default function Project({ title, subtitle, url, imageUrl }: Props) {
   return (
-    <Link href={url} target="_blank" className="">
+    <Link href={url} target="_blank" className="flex">
       <div className="flex flex-col gap-4 group">
         <div className="box-content overflow-hidden border aspect-video bg-bg-active border-border hover:border-border-active">
           <Image
@@ -19,7 +19,7 @@ export default function Project({ title, subtitle, url, imageUrl }: Props) {
             alt="card"
             width={388 * 2}
             height={218.25 * 2}
-            className="group-hover:scale-[107%] w-[24.25rem] aspect-video select-none"
+            className="group-hover:scale-[107%] w-full  aspect-video select-none"
           />
         </div>
 

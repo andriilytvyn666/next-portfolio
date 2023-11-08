@@ -17,7 +17,7 @@ const FeaturedProjectsSlider: FC<Props> = ({ projects }) => {
   const builder = imageUrlBuilder(client)
 
   return (
-    <div className="max-w-[75.75rem]">
+    <div className="w-full lg:pr-[10.25rem]">
       <Swiper
         modules={[Autoplay]}
         autoplay={{
@@ -30,13 +30,13 @@ const FeaturedProjectsSlider: FC<Props> = ({ projects }) => {
         spaceBetween={24}
         breakpoints={{
           640: {
-            slidesPerView: 3,
+            slidesPerView: 2,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
           },
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 2,
           },
           1280: {
             slidesPerView: 3,
