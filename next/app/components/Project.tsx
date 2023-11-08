@@ -19,7 +19,7 @@ export default function Project({ title, subtitle, url, imageUrl }: Props) {
             alt="card"
             width={388 * 2}
             height={218.25 * 2}
-            className="group-hover:scale-[107%] w-full  aspect-video select-none"
+            className="group-hover:scale-[107%] aspect-video select-none"
           />
         </div>
 
