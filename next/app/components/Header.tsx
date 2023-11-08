@@ -22,7 +22,7 @@ export default function Header({ navNames }: Props) {
   const pathname = usePathname()
 
   return (
-    <header className="flex justify-between w-full lg:py-4">
+    <header className="sticky top-0 z-50 flex justify-between w-full py-4 lg:py-4 bg-bg">
       <div id="logo" className="flex items-center gap-4 select-none">
         <NavLink href="/">
           <Image

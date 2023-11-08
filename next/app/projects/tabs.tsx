@@ -5,11 +5,17 @@ import { FiBox, FiFigma, FiFile } from 'react-icons/fi'
 
 import { useTabs } from '../providers/TabsProvider'
 
-const Tabs: FC = () => {
+type Props = {
+  className?: string
+}
+
+const Tabs: FC<Props> = ({ className }) => {
   const projectsContext = useTabs()
 
   return (
-    <div className="border-border rounded-lg border w-fit flex [&>*]:text-body [&>*]:text-clickable mx-auto p-4 gap-5 items-center justify-center">
+    <div
+      className={`${className} bg-bg z-50 shadow-lg border-border rounded-lg border w-fit [&>*]:text-body [&>*]:text-clickable mx-auto p-4 gap-5 items-center justify-center`}
+    >
       <button
         type="button"
         className={`group flex gap-2  ${
@@ -19,6 +25,7 @@ const Tabs: FC = () => {
         }`}
         onClick={() => {
           projectsContext.setActiveTab('web')
+          window.scrollTo(0, 0)
         }}
       >
         <FiBox className="w-5 h-5 transition-none group-hover:stroke-fg-active " />
@@ -34,6 +41,7 @@ const Tabs: FC = () => {
         }`}
         onClick={() => {
           projectsContext.setActiveTab('figma')
+          window.scrollTo(0, 0)
         }}
       >
         <FiFigma className="w-5 h-5 transition-none group-hover:stroke-fg-active " />
@@ -48,6 +56,7 @@ const Tabs: FC = () => {
         }`}
         onClick={() => {
           projectsContext.setActiveTab('html')
+          window.scrollTo(0, 0)
         }}
       >
         <FiFile className="w-5 h-5 transition-none group-hover:stroke-fg-active " />
@@ -55,6 +64,10 @@ const Tabs: FC = () => {
       </button>
     </div>
   )
+}
+
+Tabs.defaultProps = {
+  className: '',
 }
 
 export default Tabs
