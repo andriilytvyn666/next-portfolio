@@ -32,8 +32,7 @@ const HomepageSlider: FC<Props> = ({ pix, className }) => {
       {pix.map((pic) => {
         return (
           <SwiperSlide key={pic.asset._ref}>
-            {/* max-h-[22.625rem] */}
-            <div className="md:max-h-[22.625rem] lg:max-h-[20rem] lg:h-full box-content flex items-center justify-center overflow-hidden border  hover:border-border-active border-border">
+            <div className="md:max-h-[22.625rem] lg:max-h-[21rem] lg:h-full box-content flex items-center justify-center overflow-hidden border  hover:border-border-active border-border">
               <Image
                 src={builder.image(pic).url()}
                 width={480}

@@ -8,9 +8,9 @@ import React from 'react'
 import { FiBox, FiInstagram, FiUser } from 'react-icons/fi'
 
 const links = [
-  { name: 'projects', link: '/projects' },
-  { name: 'pix', link: '/pix' },
-  { name: 'resume', link: '/resume' },
+  { name: 'projects', link: '/projects', newPage: false },
+  { name: 'pix', link: '/pix', newPage: false },
+  { name: 'resume', link: '/andrii-lytvyn-resume.pdf', newPage: true },
 ]
 
 type Props = {
@@ -48,6 +48,7 @@ export default function Header({ navNames }: Props) {
           >
             <Link
               href={link.link}
+              target={link.newPage ? '_blank' : '_self'}
               className={`select-none flex gap-2 p-2 [&>*]:transition-none transition-none ${
                 link.link === pathname && 'text-fg-active'
               }`}

@@ -50,43 +50,47 @@ export default async function Home() {
           <h1 className="hidden underline duration-100 lg:inline text-title text-fg-active">
             {data.title}
           </h1>
-          <PortableText value={data.text} components={portableTextComponents} />
-          {/* TODO: fix weird grid behaviour */}
-          <div className="flex flex-col gap-4 pt-4 md:flex-row">
-            <div className="flex gap-4 md:hidden">
+          <div className="flex flex-col gap-4 md:flex-col-reverse lg:flex-col">
+            <PortableText
+              value={data.text}
+              components={portableTextComponents}
+            />
+            <div className="flex flex-col gap-4 pt-4 md:pt-0 lg:pt-4 md:flex-row">
+              <div className="flex gap-4 md:hidden">
+                <Button
+                  name="telegram"
+                  link="https://t.me/nneeeooo"
+                  target="_blank"
+                />
+                <Button
+                  name="email"
+                  link="mailto:lytvyn.andrii.contact@gmail.com"
+                />
+              </div>
               <Button
                 name="telegram"
                 link="https://t.me/nneeeooo"
                 target="_blank"
+                className="hidden md:flex"
               />
               <Button
                 name="email"
                 link="mailto:lytvyn.andrii.contact@gmail.com"
+                className="hidden md:flex"
+              />
+              <Button
+                name="github"
+                link="https://github.com/andriilytvyn666"
+                target="_blank"
+                className="col-span-2"
+              />
+              <Button
+                name="instagram"
+                link="https://instagram.com/nneeeooo_pics"
+                target="_blank"
+                className="col-span-2"
               />
             </div>
-            <Button
-              name="telegram"
-              link="https://t.me/nneeeooo"
-              target="_blank"
-              className="hidden md:flex"
-            />
-            <Button
-              name="email"
-              link="mailto:lytvyn.andrii.contact@gmail.com"
-              className="hidden md:flex"
-            />
-            <Button
-              name="github"
-              link="https://github.com/andriilytvyn666"
-              target="_blank"
-              className="col-span-2"
-            />
-            <Button
-              name="instagram"
-              link="https://instagram.com/nneeeooo_pics"
-              target="_blank"
-              className="col-span-2"
-            />
           </div>
         </div>
       </div>
