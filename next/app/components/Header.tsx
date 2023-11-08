@@ -55,21 +55,21 @@ export default function Header({ navNames }: Props) {
               <FiBox
                 width={20}
                 height={20}
-                className={`group-hover:stroke-fg-active w-5 h-5 ${
+                className={` group-hover:stroke-fg-active w-5 h-5 ${
                   link.link === pathname && 'stroke-fg-active'
-                } ${link.name === 'projects' ? 'block' : 'hidden'}`}
+                } ${link.name === 'projects' ? 'xs:block hidden' : 'hidden'}`}
               />
               <FiUser
                 width={20}
                 height={20}
                 className={`group-hover:stroke-fg-active w-5 h-5 ${
                   link.link === pathname && 'stroke-fg-active'
-                } ${link.name === 'resume' ? 'block' : 'hidden'}`}
+                } ${link.name === 'resume' ? 'xs:block hidden' : 'hidden'}`}
               />
               <FiInstagram
                 className={`group-hover:stroke-fg-active w-5 h-5 ${
                   link.link === pathname && 'stroke-fg-active'
-                } ${link.name === 'pix' ? 'block' : 'hidden'}`}
+                } ${link.name === 'pix' ? 'xs:block hidden' : 'hidden'}`}
               />
               {link.name}
             </Link>
