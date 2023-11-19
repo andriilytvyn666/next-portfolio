@@ -15,6 +15,7 @@ export default async function Pics() {
   return (
     <div className="flex flex-col gap-5">
       <ImageViewer />
+
       {data
         .sort((a, b) => {
           const dateA = new Date(a.date)
