@@ -12,7 +12,7 @@ const ImageViewer: FC = () => {
     <div
       className={`${
         isImageOpen ? '' : 'hidden'
-      } fixed top-0 left-0 z-50 flex items-center justify-center w-full min-h-screen flex-grow px-4 lg:px-0 md:w-screen`}
+      } fixed bottom-0 left-0 z-50 flex items-center justify-center w-full min-h-screen flex-grow px-4 lg:px-0 md:w-screen`}
       onClick={() => setIsImageOpen(false)}
     >
       <div className="absolute z-20 w-full h-full bg-bg opacity-95" />
