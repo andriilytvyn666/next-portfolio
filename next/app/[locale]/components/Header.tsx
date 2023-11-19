@@ -37,7 +37,7 @@ export default function Header({ navNames }: Props) {
           />
         </NavLink>
         <NavLink href="/">
-          <h1 className="hidden lg:inline text-clickable text-body whitespace-nowrap">
+          <h1 className="hidden sm:inline text-clickable text-body whitespace-nowrap">
             {t('name')}
           </h1>
         </NavLink>
