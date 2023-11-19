@@ -12,7 +12,7 @@ export default async function Pics() {
   const builder = imageUrlBuilder(client)
 
   return (
-    <>
+    <div className="flex flex-col gap-5">
       {data
         .sort((a, b) => {
           const dateA = new Date(a.date)
@@ -34,6 +34,6 @@ export default async function Pics() {
             </PicsSection>
           )
         })}
-    </>
+    </div>
   )
 }
