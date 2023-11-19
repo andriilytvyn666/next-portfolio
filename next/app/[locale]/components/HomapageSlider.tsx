@@ -14,7 +14,7 @@ type Props = {
   className?: string
 }
 
-const HomepageSlider: FC<Props> = ({ pix, className }) => {
+const HomepageSlider: FC<Props> = ({ pix, className = '' }) => {
   const builder = imageUrlBuilder(client)
   return (
     <Swiper
@@ -48,10 +48,6 @@ const HomepageSlider: FC<Props> = ({ pix, className }) => {
     // TODO: reuse this bullets tag
     // <div id="bullets" className="flex justify-center gap-2.5"></div>
   )
-}
-
-HomepageSlider.defaultProps = {
-  className: '',
 }
 
 export default HomepageSlider
