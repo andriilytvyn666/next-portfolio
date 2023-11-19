@@ -30,7 +30,7 @@ export default function PicsSection({ date, children }: Props) {
       <div
         className={`${
           isGroupHidden ? 'h-0 opacity-0' : 'h-full'
-        } overflow-hidden gap-x-6 gap-y-6 lg:gap-y-8 w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 `}
+        } overflow-hidden gap-y-6 sm:gap-y-0 w-full grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 `}
       >
         {children}
       </div>
