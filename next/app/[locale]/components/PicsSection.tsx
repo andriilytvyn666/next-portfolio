@@ -10,7 +10,6 @@ type Props = {
 
 export default function PicsSection({ date, children }: Props) {
   const locale = useLocale()
-
   const [isGroupHidden, setIsGroupHidden] = useState(false)
 
   return (

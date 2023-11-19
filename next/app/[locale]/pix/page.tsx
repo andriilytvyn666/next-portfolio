@@ -1,6 +1,7 @@
 import imageUrlBuilder from '@sanity/image-url'
 
 import client from '../../../client'
+import ImageViewer from '../components/ImageViewer'
 import PicCard from '../components/PicCard'
 import PicsSection from '../components/PicsSection'
 
@@ -13,6 +14,7 @@ export default async function Pics() {
 
   return (
     <div className="flex flex-col gap-5">
+      <ImageViewer />
       {data
         .sort((a, b) => {
           const dateA = new Date(a.date)

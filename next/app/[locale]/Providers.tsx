@@ -2,6 +2,7 @@
 
 import { FC, useEffect, useState } from 'react'
 
+import ImageViewerProvider from './providers/ImageViewerProvider'
 import TabsProvider from './providers/TabsProvider'
 
 type Props = {
@@ -19,7 +20,11 @@ const Providers: FC<Props> = ({ children }: Props) => {
     return <>{children}</>
   }
 
-  return <TabsProvider>{children}</TabsProvider>
+  return (
+    <ImageViewerProvider>
+      <TabsProvider>{children}</TabsProvider>
+    </ImageViewerProvider>
+  )
 }
 
 export default Providers
