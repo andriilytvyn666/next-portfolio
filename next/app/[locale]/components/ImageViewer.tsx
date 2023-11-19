@@ -19,7 +19,15 @@ const ImageViewer: FC = () => {
       onClick={() => setIsImageOpen(false)}
     >
       <div className="absolute z-20 w-full h-full bg-bg opacity-95" />
-      <Image src={image} alt="test" width={800} height={600} className="z-30" />
+      <Image
+        src={image}
+        alt="test"
+        width={1600}
+        height={1200}
+        className="z-30 w-[50rem] aspect-[4/3]"
+        loading="eager"
+        quality={100}
+      />
     </div>
     // </Modal>
   )

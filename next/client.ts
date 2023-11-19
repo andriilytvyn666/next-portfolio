@@ -7,5 +7,6 @@ export default createClient({
   projectId: projectId,
   dataset: dataset,
   useCdn: true,
-  apiVersion: '2023-11-09',
+  // apiVersion: 'vX',
+  apiVersion: '2023-11-23',
 })
