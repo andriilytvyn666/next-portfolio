@@ -1,16 +1,21 @@
 import {Rule} from 'sanity'
 
-// TODO: move resume link to separate field
-
 export default {
   name: 'homepage',
   title: 'Home Page',
   type: 'document',
   fields: [
     {
-      name: 'name',
+      name: 'title',
       type: 'string',
       validation: (rule: Rule) => rule.required(),
+    },
+    {
+      name: 'pix',
+      type: 'array',
+      description: 'jpeg (4:3 aspect ratio)',
+      of: [{type: 'image', options: {accept: 'image/jpeg'}}],
+      validation: (rule: Rule) => rule.min(1).required(),
     },
     {
       name: 'text',
@@ -22,6 +27,12 @@ export default {
       name: 'links',
       type: 'array',
       of: [{type: 'link'}],
+    },
+    {
+      name: 'featuredProjects',
+      type: 'array',
+      of: [{type: 'project'}],
+      validation: (rule: Rule) => rule.required().min(3),
     },
   ],
 }

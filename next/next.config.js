@@ -1,13 +1,16 @@
 // next.config.js
-const { withContentlayer } = require('next-contentlayer')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    mdxRs: true,
-  },
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ['cdn.sanity.io']
+  }
 }
 
-module.exports = withContentlayer(nextConfig)
+const withNextIntl = require('next-intl/plugin')(
+  './i18n.ts'
+);
+
+module.exports = withNextIntl(nextConfig)

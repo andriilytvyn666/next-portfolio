@@ -7,79 +7,41 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-      itemTitle: [
-        '1.125rem',
-        {
-          lineHeight: '1.375rem',
-          fontWeight: '500',
-        },
-      ],
-      itemSubtitle: [
-        '1rem',
-        {
-          lineHeight: '1.375rem',
-          fontWeight: '500',
-        },
-      ],
-      itemNav: [
-        '1rem',
+      title: [
+        '1.5rem',
         {
           lineHeight: '1.75rem',
-          fontWeight: '500',
-        },
+          fontWeight: '600'
+        }
       ],
-      footer: [
-        '1rem',
+      subtitle: [
+        '1.25rem',
         {
           lineHeight: '1.5rem',
-          fontWeight: '500',
-        },
+          fontWeight: '600'
+        }
       ],
       body: [
         '1rem',
         {
-          lineHeight: '1.5rem',
+          lineHeight: '1.25rem',
           fontWeight: '500',
-        },
-      ],
-      header: [
-        '2rem',
-        {
-          lineHeight: '2.375rem',
-          fontWeight: '700',
-        },
-      ],
-      headerXl: [
-        '2.25rem',
-        {
-          lineHeight: '2.5rem',
-          fontWeight: '700',
-        },
-      ],
-      headerSm: [
-        '1.25rem',
-        {
-          lineHeight: '1.75rem',
-          fontWeight: '600',
-        },
-      ],
-      skillChip: [
-        '1rem',
-        {
-          lineHeight: '1.5rem',
-          fontWeight: '400',
-        },
+        }
       ],
     },
     colors: {
       bg: {
-        DEFAULT: '#050505',
-        active: '#212121',
+        DEFAULT: '#0E0E0E',
+        active: '#252525'
       },
       fg: {
-        DEFAULT: '#FFFFFF',
-        secondary: '#838383',
+        DEFAULT: '#8B8B8B',
+        active: '#F8F8F8'
       },
+      border: {
+        DEFAULT: '#494949',
+        active: '#AEAEAE'
+      }
     },
     extend: {
       screens: {
@@ -87,5 +49,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-react-aria-components')
+  ],
 }

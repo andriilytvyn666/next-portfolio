@@ -17,13 +17,14 @@ export default {
     },
     {
       name: 'link',
-      type: 'url',
+      type: 'string',
+      description: 'external link or internal (/projects)',
       validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'image',
       type: 'image',
-      description: 'webp 128x128',
+      description: 'webp (16:9 aspect ratio)',
       options: {accept: 'image/webp'},
       validation: (rule: Rule) => rule.required(),
     },

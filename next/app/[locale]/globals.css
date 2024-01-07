@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    font-family: 'Times New Roman', serif;
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+}
